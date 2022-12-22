@@ -12,12 +12,12 @@ struct SlideToUnlockButtonView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                BackgroundComponent()
-                DragComponent(isLocked: $isLocked, action: { }, maxWidth: geometry.size.width)
-            }
+                ZStack(alignment: .leading) {
+                    BackgroundComponent()
+                    DragComponent(isLocked: $isLocked, action: { }, maxWidth: geometry.size.width)
+                }
         }
-        .frame(height: 50)
+        .frame(height: 55)
         .padding()
         .onChange(of: isLocked) { isLocked in
             guard !isLocked else { return }

@@ -93,8 +93,8 @@
 			children = (
 				E61EB704295358900057608E /* DragComponent.swift */,
 				E61EB706295365040057608E /* BackgroundComponent.swift */,
-				E61EB70A295367D30057608E /* ColorStyle.swift */,
 				E6A2CE222953827500900205 /* UnlockButtonStyle.swift */,
+				E61EB70A295367D30057608E /* ColorStyle.swift */,
 			);
 			path = ButtonComponents;
 			sourceTree = "<group>";
