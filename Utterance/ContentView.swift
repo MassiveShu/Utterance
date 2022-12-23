@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        VStack {
-            OnboardingStarsAnimation()
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundColor(.accentColor)
-//            Text("Srart")
-//        }
-//        .padding()
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text("Srart")
+        }
+        .padding()
     }
 }
 

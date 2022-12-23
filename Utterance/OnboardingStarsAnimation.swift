@@ -40,7 +40,7 @@ struct OnboardingStarsAnimation: View {
     }
 
     func random() -> CGFloat {
-        return CGFloat(Int.random(in: 30..<200))
+        return CGFloat(Int.random(in: 20..<130))
     }
 }
 
