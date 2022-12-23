@@ -11,11 +11,3 @@ extension Color {
     static let yellowSW: Color = Color("yellowSWColor")
     static let lightBlueSW: Color = Color("lightBlueSWColor")
 }
-
-#if os(iOS)
-import UIKit
-extension Color {
-    static let label = Color(uiColor: .label)
-    static let textBackground = Color(uiColor: .systemBackground)
-}
-#endif
