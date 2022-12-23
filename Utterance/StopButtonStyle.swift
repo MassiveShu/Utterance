@@ -13,7 +13,7 @@ struct StopButtonStyle: ButtonStyle {
             .font(.largeTitle.bold())
             .background(configuration.isPressed ? Color.yellow : .blue)
             .foregroundColor(Color.white)
+            .clipShape(RoundedRectangle(cornerRadius: 25))
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
     }
 }
