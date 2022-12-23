@@ -21,8 +21,6 @@ struct OnboardingStarsAnimation: View {
                             // size of stars
                                 .frame(width: 3, height: 2)
                                 .blur(radius: runAnimation ? 1 : 0)
-                            // animate stars
-                                .animation(Animation.easeInOut(duration: 13).repeatForever())
                                 .padding(EdgeInsets(
                                     top: self.random(),
                                     leading: 0,
@@ -30,7 +28,11 @@ struct OnboardingStarsAnimation: View {
                                     trailing: self.random())
                                 )
                                 .onAppear() {
-                                    self.runAnimation = true
+                                    let animation = Animation.easeOut(duration: 13).repeatForever()
+                                    // animate stars
+                                    withAnimation(animation) {
+                                        self.runAnimation = true
+                                    }
                                 }
                         }
                     }
