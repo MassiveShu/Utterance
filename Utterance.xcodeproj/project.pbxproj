@@ -11,6 +11,10 @@
 		E61EB6F52952195D0057608E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* ContentView.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
+		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
+		E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319C2955F0DC000AAB26 /* StopButton.swift */; };
+		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
+		E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		E61EB6F42952195D0057608E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E61EB6F62952195E0057608E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EB6F92952195E0057608E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		E6C6319C2955F0DC000AAB26 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
+		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
+		E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E61EB6F42952195D0057608E /* ContentView.swift */,
+				E6C6319A2955F0D5000AAB26 /* PlayButton.swift */,
+				E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */,
+				E6C6319C2955F0DC000AAB26 /* StopButton.swift */,
+				E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */,
 				E61EB6F62952195E0057608E /* Assets.xcassets */,
 				E61EB6F82952195E0057608E /* Preview Content */,
 			);
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61EB6F52952195D0057608E /* ContentView.swift in Sources */,
+				E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
+				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
+				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
+				E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
