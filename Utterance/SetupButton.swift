@@ -11,8 +11,15 @@ struct SetupButton: View {
     let action: () -> Void
 
     var body: some View {
-        Button("Setup", action: action)
-            .buttonStyle(SetupButtonStyle())
+        Button {
+            action()
+        } label: {
+            Text("Setup")
+                .padding(.vertical, 30)
+                .padding(.horizontal, 130)
+        }
+        .buttonStyle(SetupButtonStyle())
+
     }
 }
 
