@@ -10,9 +10,19 @@
 		E600C80E2955E918004F4EB5 /* SetupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80D2955E918004F4EB5 /* SetupButton.swift */; };
 		E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */; };
 		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
-		E61EB6F52952195D0057608E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* ContentView.swift */; };
+		E61EB6F52952195D0057608E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* HomeView.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
+		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
+		E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319C2955F0DC000AAB26 /* StopButton.swift */; };
+		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
+		E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */; };
+		E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB692957134800DEE0B0 /* DragComponent.swift */; };
+		E6D5BB6F2957134800DEE0B0 /* UnlockButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6A2957134800DEE0B0 /* UnlockButtonStyle.swift */; };
+		E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6B2957134800DEE0B0 /* BackgroundComponent.swift */; };
+		E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */; };
+		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
+		E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,9 +30,19 @@
 		E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtonStyle.swift; sourceTree = "<group>"; };
 		E61EB6EF2952195D0057608E /* Utterance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utterance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61EB6F22952195D0057608E /* UtteranceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceApp.swift; sourceTree = "<group>"; };
-		E61EB6F42952195D0057608E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E61EB6F42952195D0057608E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E61EB6F62952195E0057608E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EB6F92952195E0057608E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		E6C6319C2955F0DC000AAB26 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
+		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
+		E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButtonStyle.swift; sourceTree = "<group>"; };
+		E6D5BB692957134800DEE0B0 /* DragComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragComponent.swift; sourceTree = "<group>"; };
+		E6D5BB6A2957134800DEE0B0 /* UnlockButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnlockButtonStyle.swift; sourceTree = "<group>"; };
+		E6D5BB6B2957134800DEE0B0 /* BackgroundComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundComponent.swift; sourceTree = "<group>"; };
+		E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
+		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButtonView.swift; sourceTree = "<group>"; };
+		E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStarsAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +75,18 @@
 		E61EB6F12952195D0057608E /* Utterance */ = {
 			isa = PBXGroup;
 			children = (
+				E61EB6F42952195D0057608E /* HomeView.swift */,
+				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
 				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E61EB6F42952195D0057608E /* ContentView.swift */,
 				E600C80D2955E918004F4EB5 /* SetupButton.swift */,
 				E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */,
+				E6C6319A2955F0D5000AAB26 /* PlayButton.swift */,
+				E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */,
+				E6C6319C2955F0DC000AAB26 /* StopButton.swift */,
+				E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */,
 				E61EB6F62952195E0057608E /* Assets.xcassets */,
+				E6D5BB672957134800DEE0B0 /* Buttons */,
 				E61EB6F82952195E0057608E /* Preview Content */,
 			);
 			path = Utterance;
@@ -71,6 +98,26 @@
 				E61EB6F92952195E0057608E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6D5BB672957134800DEE0B0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E6D5BB682957134800DEE0B0 /* ButtonComponents */,
+				E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E6D5BB682957134800DEE0B0 /* ButtonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E6D5BB692957134800DEE0B0 /* DragComponent.swift */,
+				E6D5BB6A2957134800DEE0B0 /* UnlockButtonStyle.swift */,
+				E6D5BB6B2957134800DEE0B0 /* BackgroundComponent.swift */,
+				E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */,
+			);
+			path = ButtonComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +191,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61EB6F52952195D0057608E /* ContentView.swift in Sources */,
+				E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */,
+				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
+				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
+				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
+				E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */,
+				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,
+				E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */,
+				E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E600C80E2955E918004F4EB5 /* SetupButton.swift in Sources */,
 				E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */,
+				E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */,
+				E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */,
+				E6D5BB6F2957134800DEE0B0 /* UnlockButtonStyle.swift in Sources */,
+				E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
