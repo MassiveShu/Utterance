@@ -15,11 +15,13 @@ struct OnboardingStartView: View {
                 OnboardingStarsAnimation()
             }
             VStack {
+                Spacer()
                 Text("A long time ago, \nin a galaxy far, far away...")
                     .font(.custom("SfDistantGalaxyOutline", size: 60))
                     .foregroundColor(Color.yellowSW)
-                    .padding(.top, 120)
+
                 Spacer()
+                
                 SlideToUnlockButtonView()
             }
             .padding(50)
