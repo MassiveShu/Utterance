@@ -23,6 +23,7 @@
 		E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */; };
 		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
 		E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */; };
+		E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButtonView.swift; sourceTree = "<group>"; };
 		E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStarsAnimation.swift; sourceTree = "<group>"; };
+		E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
+				E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,
 				E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */,
+				E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
