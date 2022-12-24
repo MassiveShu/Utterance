@@ -63,11 +63,11 @@
 		E61EB6F12952195D0057608E /* Utterance */ = {
 			isa = PBXGroup;
 			children = (
-				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
-				E6D5BB672957134800DEE0B0 /* Buttons */,
-				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E61EB6F42952195D0057608E /* HomeView.swift */,
+				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
+				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E61EB6F62952195E0057608E /* Assets.xcassets */,
+				E6D5BB672957134800DEE0B0 /* Buttons */,
 				E61EB6F82952195E0057608E /* Preview Content */,
 			);
 			path = Utterance;
