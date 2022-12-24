@@ -14,7 +14,6 @@ struct StopButton: View {
         Button(action: action) {
             Image(systemName: "stop.circle")
                 .padding()
-                
         }
         .buttonStyle(StopButtonStyle())
     }
@@ -23,13 +22,9 @@ struct StopButton: View {
 struct StopButton_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            PlayButton(action: {
+            StopButton(action: {
             })
             .padding()
-            StopButton(action: {
-
-            })
         }
-
     }
 }

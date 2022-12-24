@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SetupButton: View {
     let action: () -> Void
-
+    
     var body: some View {
         Button {
             action()
@@ -19,14 +19,13 @@ struct SetupButton: View {
                 .padding(.horizontal, 130)
         }
         .buttonStyle(SetupButtonStyle())
-
     }
 }
 
 struct SetupButton_Previews: PreviewProvider {
     static var previews: some View {
         SetupButton(action: {
-
+            
         })
     }
 }

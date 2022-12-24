@@ -24,7 +24,7 @@ struct OnboardingStarsAnimation: View {
                         ForEach(Constant.numberOfStars, id: \.self) { _ in
                             Circle()
                                 .fill(Color.white)
-                            // size of stars
+                                // size of stars
                                 .frame(width: 3, height: 2)
                                 .blur(radius: runAnimation ? 1 : 0)
                                 .padding(
@@ -37,7 +37,7 @@ struct OnboardingStarsAnimation: View {
                                 )
                                 .onAppear() {
                                     let animation = Animation.easeOut(duration: 13).repeatForever()
-                                    // animate stars
+                                    // stars animation
                                     withAnimation(animation) {
                                         self.runAnimation = true
                                     }

@@ -18,48 +18,47 @@ struct DragComponent: View {
     @State private var width = CGFloat(50)
 
     var body: some View {
-            RoundedRectangle(cornerRadius: 15)
-                .fill(Color.yellowSW)
-                    // make a yellow color opacity when graging from 1 to 0
-                .opacity(width / maxWidth)
-                .frame(width: width)
-                .overlay(
-                    // wrapping the component to the button and apply the button style:
-                    Button(action: action) {
-                        ZStack {
-                            image(name: "arrowshape.right", isShown: isLocked)
-                            image(name: "lock.open", isShown: !isLocked)
-                        }
-                        .animation(.easeIn(duration: 0.35).delay(0.55), value: !isLocked)
+        RoundedRectangle(cornerRadius: 15)
+            .fill(Color.yellowSW)
+            // make a yellow color opacity when graging from 1 to 0
+            .opacity(width / maxWidth)
+            .frame(width: width)
+            .overlay(
+                // wrapping the component to the button and apply the button style:
+                Button(action: action) {
+                    ZStack {
+                        image(name: "arrowshape.right", isShown: isLocked)
+                        image(name: "lock.open", isShown: !isLocked)
                     }
-                        .buttonStyle(UnlockButtonStyle()),
+                    .animation(.easeIn(duration: 0.35).delay(0.55), value: !isLocked)
+                }
+                    .buttonStyle(UnlockButtonStyle()),
                     alignment: .trailing
-                )
-
-                .simultaneousGesture(
-                    DragGesture()
-                        .onChanged { value in
-                            guard isLocked else { return }
-                            if value.translation.width > 0 {
-                                width = min(max(value.translation.width + minWidth, minWidth), maxWidth)
+            )
+            .simultaneousGesture(
+                DragGesture()
+                    .onChanged { value in
+                        guard isLocked else { return }
+                        if value.translation.width > 0 {
+                            width = min(max(value.translation.width + minWidth, minWidth), maxWidth)
+                        }
+                    }
+                    .onEnded { value in
+                        guard isLocked else { return }
+                        if width < maxWidth {
+                            width = minWidth
+                            // add some haptics
+                            UINotificationFeedbackGenerator().notificationOccurred(.warning)
+                        } else {
+                            // add some haptics
+                            UINotificationFeedbackGenerator().notificationOccurred(.success)
+                            withAnimation(.spring().delay(0.3)) {
+                                isLocked = false
                             }
                         }
-                        .onEnded { value in
-                            guard isLocked else { return }
-                            if width < maxWidth {
-                                width = minWidth
-                                // add some haptics
-                                UINotificationFeedbackGenerator().notificationOccurred(.warning)
-                            } else {
-                                // add some haptics
-                                UINotificationFeedbackGenerator().notificationOccurred(.success)
-                                withAnimation(.spring().delay(0.3)) {
-                                    isLocked = false
-                                }
-                            }
-                        }
-                )
-                .animation(.easeOut, value: width)
+                    }
+            )
+            .animation(.easeOut, value: width)
     }
 
     private func image(name: String, isShown: Bool) -> some View {

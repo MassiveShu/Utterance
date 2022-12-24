@@ -12,7 +12,7 @@ struct BackgroundComponent: View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color.lightBlueSW)
-
+            
             Text("Let's go")
                 .font(.body)
                 .bold()
