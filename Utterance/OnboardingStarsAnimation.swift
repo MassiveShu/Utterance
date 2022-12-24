@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct OnboardingStarsAnimation: View {
+    private enum Constant {
+        static let numberOfStars = 0..<5
+        static let linesOfStars = 0..<10
+    }
+    
     @State private var runAnimation = false
     var body: some View {
         ZStack {
             // create a black background with no edges ignoredSafeArea
             Color.black.edgesIgnoringSafeArea(.all)
             VStack {
-                ForEach(0..<10) { _ in
+                ForEach(Constant.linesOfStars, id: \.self) { _ in
                     HStack {
-                        ForEach(0..<5) { _ in
-                            Circle().fill(Color.white)
+                        ForEach(Constant.numberOfStars, id: \.self) { _ in
+                            Circle()
+                                .fill(Color.white)
                             // size of stars
                                 .frame(width: 3, height: 2)
                                 .blur(radius: runAnimation ? 1 : 0)
-                                .padding(EdgeInsets(
-                                    top: self.random(),
-                                    leading: 0,
-                                    bottom: 0,
-                                    trailing: self.random())
+                                .padding(
+                                    EdgeInsets(
+                                        top: self.randomPadding(),
+                                        leading: 0,
+                                        bottom: 0,
+                                        trailing: self.randomPadding()
+                                    )
                                 )
                                 .onAppear() {
                                     let animation = Animation.easeOut(duration: 13).repeatForever()
@@ -40,9 +48,9 @@ struct OnboardingStarsAnimation: View {
             }
         }
     }
-
-    func random() -> CGFloat {
-        return CGFloat(Int.random(in: 20..<150))
+    
+    func randomPadding() -> CGFloat {
+        CGFloat(Int.random(in: 20..<150))
     }
 }
 
