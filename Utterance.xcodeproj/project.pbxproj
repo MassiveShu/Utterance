@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E600C80C2955CE4A004F4EB5 /* OnboardingStarsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80B2955CE4A004F4EB5 /* OnboardingStarsAnimation.swift */; };
 		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E61EB6F52952195D0057608E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* HomeView.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
@@ -15,7 +14,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E600C80B2955CE4A004F4EB5 /* OnboardingStarsAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStarsAnimation.swift; sourceTree = "<group>"; };
 		E61EB6EF2952195D0057608E /* Utterance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utterance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61EB6F22952195D0057608E /* UtteranceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceApp.swift; sourceTree = "<group>"; };
 		E61EB6F42952195D0057608E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -64,6 +62,7 @@
 				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E61EB6F42952195D0057608E /* HomeView.swift */,
 				E600C80B2955CE4A004F4EB5 /* OnboardingStarsAnimation.swift */,
+				E61EB700295232100057608E /* Buttons */,
 				E61EB6F62952195E0057608E /* Assets.xcassets */,
 				E61EB6F82952195E0057608E /* Preview Content */,
 			);
@@ -150,6 +149,10 @@
 			files = (
 				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,
 				E600C80C2955CE4A004F4EB5 /* OnboardingStarsAnimation.swift in Sources */,
+				E6A2CE232953827500900205 /* UnlockButtonStyle.swift in Sources */,
+				E61EB707295365040057608E /* BackgroundComponent.swift in Sources */,
+				E61EB702295232440057608E /* SlideToUnlockButtonView.swift in Sources */,
+				E61EB70B295367D30057608E /* ColorStyle.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
