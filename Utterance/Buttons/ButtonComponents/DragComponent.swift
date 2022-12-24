@@ -11,16 +11,16 @@ import CoreHaptics
 struct DragComponent: View {
     @Binding var isLocked: Bool
     let action: () -> Void
-
+    
     let maxWidth: CGFloat
-
+    
     private let minWidth = CGFloat(50)
     @State private var width = CGFloat(50)
-
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color.yellowSW)
-            // make a yellow color opacity when graging from 1 to 0
+        // make a yellow color opacity when graging from 1 to 0
             .opacity(width / maxWidth)
             .frame(width: width)
             .overlay(
@@ -33,7 +33,7 @@ struct DragComponent: View {
                     .animation(.easeIn(duration: 0.35).delay(0.55), value: !isLocked)
                 }
                     .buttonStyle(UnlockButtonStyle()),
-                    alignment: .trailing
+                alignment: .trailing
             )
             .simultaneousGesture(
                 DragGesture()
@@ -60,7 +60,7 @@ struct DragComponent: View {
             )
             .animation(.easeOut, value: width)
     }
-
+    
     private func image(name: String, isShown: Bool) -> some View {
         Image(systemName: name)
             .font(.system(size: 25, weight: .regular, design: .rounded))
@@ -78,7 +78,7 @@ struct DragComponent_Previews: PreviewProvider {
         DragComponent(
             isLocked: .constant(true),
             action: {
-
+                
             },
             maxWidth: 50
         )

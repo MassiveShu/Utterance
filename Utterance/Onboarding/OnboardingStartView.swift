@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct OnboardingStartView: View {
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                OnboardingStarsAnimation()
+            }
+            VStack {
+                Text("A long time ago, \nin a galaxy far, far away...")
+                    .font(.custom("SfDistantGalaxyOutline", size: 60))
+                    .foregroundColor(Color.yellowSW)
+                    .padding(.top, 120)
+                Spacer()
+                SlideToUnlockButtonView()
+            }
+            .padding(50)
+        }
     }
 }
 

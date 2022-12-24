@@ -17,8 +17,7 @@ struct SlideToUnlockButtonView: View {
                 DragComponent(isLocked: $isLocked, action: { }, maxWidth: geometry.size.width)
             }
         }
-        .frame(height: 55)
-        .padding()
+        .frame(width: 350, height: 55)
         .onChange(of: isLocked) { isLocked in
             guard !isLocked else { return }
         }
