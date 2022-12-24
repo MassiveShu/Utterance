@@ -20,7 +20,7 @@ struct DragComponent: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color.yellowSW)
-        // make a yellow color opacity when graging from 1 to 0
+            // make a yellow color opacity when graging from 1 to 0
             .opacity(width / maxWidth)
             .frame(width: width)
             .overlay(
@@ -60,7 +60,7 @@ struct DragComponent: View {
             )
             .animation(.easeOut, value: width)
     }
-    
+
     private func image(name: String, isShown: Bool) -> some View {
         Image(systemName: name)
             .font(.system(size: 25, weight: .regular, design: .rounded))

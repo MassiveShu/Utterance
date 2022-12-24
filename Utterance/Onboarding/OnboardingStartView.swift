@@ -21,7 +21,7 @@ struct OnboardingStartView: View {
                     .foregroundColor(Color.yellowSW)
 
                 Spacer()
-                
+
                 SlideToUnlockButtonView()
             }
             .padding(50)
