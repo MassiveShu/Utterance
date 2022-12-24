@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E600C80E2955E918004F4EB5 /* SetupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80D2955E918004F4EB5 /* SetupButton.swift */; };
+		E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */; };
 		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E61EB6F52952195D0057608E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* HomeView.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E600C80D2955E918004F4EB5 /* SetupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButton.swift; sourceTree = "<group>"; };
+		E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtonStyle.swift; sourceTree = "<group>"; };
 		E61EB6EF2952195D0057608E /* Utterance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utterance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61EB6F22952195D0057608E /* UtteranceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceApp.swift; sourceTree = "<group>"; };
 		E61EB6F42952195D0057608E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
 				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E61EB6F42952195D0057608E /* ContentView.swift */,
+				E600C80D2955E918004F4EB5 /* SetupButton.swift */,
+				E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */,
 				E6C6319A2955F0D5000AAB26 /* PlayButton.swift */,
 				E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */,
 				E6C6319C2955F0DC000AAB26 /* StopButton.swift */,
@@ -194,6 +200,8 @@
 				E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */,
 				E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
+				E600C80E2955E918004F4EB5 /* SetupButton.swift in Sources */,
+				E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */,
 				E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */,
 				E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */,
 				E6D5BB6F2957134800DEE0B0 /* UnlockButtonStyle.swift in Sources */,
