@@ -30,6 +30,8 @@ struct SlideToUnlockButtonView: View {
 
 struct SlideToUnlockButton_Previews: PreviewProvider {
     static var previews: some View {
-        SlideToUnlockButtonView(action: { })
+        SlideToUnlockButtonView(action: {
+
+        })
     }
 }

@@ -11,9 +11,7 @@ import SwiftUI
 struct UtteranceApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                OnboardingStartView()
-            }
+            OnboardingStartView()
         }
     }
 }

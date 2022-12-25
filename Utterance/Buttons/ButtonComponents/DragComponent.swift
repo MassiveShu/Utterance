@@ -52,7 +52,7 @@ struct DragComponent: View {
                         } else {
                             // add some haptics
                             UINotificationFeedbackGenerator().notificationOccurred(.success)
-                            withAnimation(.spring().delay(0.3)) {
+                            withAnimation(.spring()) {
                                 isLocked = false
                             }
                         }
