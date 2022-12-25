@@ -8,23 +8,32 @@
 import SwiftUI
 
 struct OnboardingStartView: View {
+    @State private var isLocked = false
 
     var body: some View {
-        ZStack {
-            VStack {
-                OnboardingStarsAnimation()
-            }
-            VStack {
-                Spacer()
-                Text("A long time ago, \nin a galaxy far, far away...")
-                    .font(.custom("SfDistantGalaxyOutline", size: 60))
-                    .foregroundColor(Color.yellowSW)
+        NavigationStack {
+            ZStack {
+                VStack {
+                    OnboardingStarsAnimation()
+                }
+                VStack {
+                    Spacer()
+                    Text("A long time ago, \nin a galaxy far, far away...")
+                        .font(.custom("SfDistantGalaxyOutline", size: 60))
+                        .foregroundColor(Color.yellowSW)
 
-                Spacer()
+                    Spacer()
 
-                SlideToUnlockButtonView()
+                    SlideToUnlockButtonView(action: {
+                        isLocked = true
+                    })
+                    .navigationDestination(
+                        isPresented: $isLocked) {
+                            OnboardingStarsAnimation()
+                        }
+                }
+                .padding(50)
             }
-            .padding(50)
         }
     }
 }
