@@ -25,6 +25,7 @@
 		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
 		E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */; };
 		E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */; };
+		E6FB90AE295A11F00070FCD2 /* OnboardingSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90AD295A11F00070FCD2 /* OnboardingSecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStarsAnimation.swift; sourceTree = "<group>"; };
 		E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
 		E6D5BB7C295755A900DEE0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6FB90AD295A11F00070FCD2 /* OnboardingSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
 				E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */,
+				E6FB90AD295A11F00070FCD2 /* OnboardingSecondView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,
 				E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */,
 				E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */,
+				E6FB90AE295A11F00070FCD2 /* OnboardingSecondView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
