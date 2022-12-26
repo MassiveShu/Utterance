@@ -24,15 +24,11 @@ struct DragComponent: View {
             .opacity(width / maxWidth)
             .frame(width: width)
             .overlay(
-                // wrapping the component to the button and apply the button style:
-                Button(action: action) {
-                    ZStack {
-                        image(name: "arrowshape.right", isShown: isLocked)
-                        image(name: "lock.open", isShown: !isLocked)
-                    }
-                    .animation(.easeIn(duration: 0.35).delay(0.55), value: !isLocked)
+                ZStack {
+                    image(name: "arrowshape.right", isShown: isLocked)
+                    image(name: "lock.open", isShown: !isLocked)
                 }
-                    .buttonStyle(UnlockButtonStyle()),
+                    .animation(.easeIn(duration: 0.35), value: !isLocked),
                 alignment: .trailing
             )
             .simultaneousGesture(
@@ -47,9 +43,11 @@ struct DragComponent: View {
                         guard isLocked else { return }
                         if width < maxWidth {
                             width = minWidth
+                            isLocked = true
                             // add some haptics
                             UINotificationFeedbackGenerator().notificationOccurred(.warning)
                         } else {
+                            action()
                             // add some haptics
                             UINotificationFeedbackGenerator().notificationOccurred(.success)
                             withAnimation(.spring()) {

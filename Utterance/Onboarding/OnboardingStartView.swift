@@ -16,8 +16,10 @@ struct OnboardingStartView: View {
                 VStack {
                     OnboardingStarsAnimation()
                 }
+
                 VStack {
                     Spacer()
+
                     Text("A long time ago, \nin a galaxy far, far away...")
                         .font(.custom("SfDistantGalaxyOutline", size: 60))
                         .foregroundColor(Color.yellowSW)
