@@ -20,7 +20,6 @@ struct DragComponent: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color.yellowSW)
-            // make a yellow color opacity when graging from 1 to 0
             .opacity(width / maxWidth)
             .frame(width: width)
             .overlay(
@@ -41,15 +40,12 @@ struct DragComponent: View {
                     }
                     .onEnded { value in
                         guard isLocked else { return }
+                        hapticResponse()
                         if width < maxWidth {
                             width = minWidth
-                            isLocked = true
-                            // add some haptics
-                            UINotificationFeedbackGenerator().notificationOccurred(.warning)
                         } else {
+                            hapticResponse()
                             action()
-                            // add some haptics
-                            UINotificationFeedbackGenerator().notificationOccurred(.success)
                             withAnimation(.spring()) {
                                 isLocked = false
                             }
@@ -68,6 +64,12 @@ struct DragComponent: View {
             .padding(4)
             .opacity(isShown ? 1 : 0)
             .scaleEffect(isShown ? 1 : 0.01)
+    }
+
+    func hapticResponse() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        let haptic = UINotificationFeedbackGenerator()
+        haptic.notificationOccurred(.success)
     }
 }
 
