@@ -23,6 +23,7 @@
 		E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */; };
 		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
 		E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */; };
+		E6FDF521295A075800FE95C2 /* OnboardingSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FDF520295A075800FE95C2 /* OnboardingSecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButtonView.swift; sourceTree = "<group>"; };
 		E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStarsAnimation.swift; sourceTree = "<group>"; };
+		E6FDF520295A075800FE95C2 /* OnboardingSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
+				E6FDF520295A075800FE95C2 /* OnboardingSecondView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,
 				E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */,
 				E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */,
+				E6FDF521295A075800FE95C2 /* OnboardingSecondView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E600C80E2955E918004F4EB5 /* SetupButton.swift in Sources */,
 				E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */,
