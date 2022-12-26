@@ -13,10 +13,7 @@ struct OnboardingStartView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                VStack {
                     OnboardingStarsAnimation()
-                }
-
                 VStack {
                     Spacer()
 
@@ -31,10 +28,9 @@ struct OnboardingStartView: View {
                             isLocked = true
                         }
                     })
-                    .navigationDestination(
-                        isPresented: $isLocked) {
-                            OnboardingStarsAnimation()
-                        }
+                    .navigationDestination(isPresented: $isLocked) {
+                        OnboardingStarsAnimation()
+                    }
                 }
                 .padding(50)
             }

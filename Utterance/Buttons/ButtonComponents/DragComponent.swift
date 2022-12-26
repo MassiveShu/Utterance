@@ -30,7 +30,7 @@ struct DragComponent: View {
                     .animation(.easeIn(duration: 0.35), value: !isLocked),
                 alignment: .trailing
             )
-            .simultaneousGesture(
+            .gesture(
                 DragGesture()
                     .onChanged { value in
                         guard isLocked else { return }
