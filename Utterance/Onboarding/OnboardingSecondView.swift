@@ -13,15 +13,31 @@ struct OnboardingSecondView: View {
             OnboardingStarsAnimation()
 
             VStack {
-                Spacer()
-
                 Text("The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space...")
-                    .font(.starWarsFont(.main, size: 30))
+                    .font(.starWarsFont(.main, size: 25))
                     .foregroundColor(Color.yellowSW)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(10)
 
                 Spacer()
             }
+            .padding(.horizontal, 15)
             .padding(50)
+
+            VStack {
+                Spacer()
+                
+                HStack {
+                    PlayButton(action: {
+
+                    })
+                    .padding(70)
+                    StopButton(action: {
+
+                    })
+                    .padding(70)
+                }
+            }
         }
     }
 }
