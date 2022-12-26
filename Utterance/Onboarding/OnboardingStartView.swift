@@ -18,7 +18,7 @@ struct OnboardingStartView: View {
                     Spacer()
 
                     Text("A long time ago, \nin a galaxy far, far away...")
-                        .font(.custom("SfDistantGalaxyOutline", size: 60))
+                        .font(.starWarsFont(.main, size: 60))
                         .foregroundColor(Color.yellowSW)
 
                     Spacer()
@@ -29,7 +29,7 @@ struct OnboardingStartView: View {
                         }
                     })
                     .navigationDestination(isPresented: $isLocked) {
-                        OnboardingStarsAnimation()
+                        OnboardingSecondView()
                     }
                 }
                 .padding(50)

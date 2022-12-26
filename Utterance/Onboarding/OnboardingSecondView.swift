@@ -9,7 +9,20 @@ import SwiftUI
 
 struct OnboardingSecondView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            OnboardingStarsAnimation()
+
+            VStack {
+                Spacer()
+
+                Text("The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space...")
+                    .font(.starWarsFont(.main, size: 30))
+                    .foregroundColor(Color.yellowSW)
+
+                Spacer()
+            }
+            .padding(50)
+        }
     }
 }
 
