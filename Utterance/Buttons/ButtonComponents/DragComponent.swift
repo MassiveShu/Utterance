@@ -11,31 +11,26 @@ import CoreHaptics
 struct DragComponent: View {
     @Binding var isLocked: Bool
     let action: () -> Void
-
+    
     let maxWidth: CGFloat
-
+    
     private let minWidth = CGFloat(50)
     @State private var width = CGFloat(50)
-
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .fill(Color.yellowSW)
-            // make a yellow color opacity when graging from 1 to 0
             .opacity(width / maxWidth)
             .frame(width: width)
             .overlay(
-                // wrapping the component to the button and apply the button style:
-                Button(action: action) {
-                    ZStack {
-                        image(name: "arrowshape.right", isShown: isLocked)
-                        image(name: "lock.open", isShown: !isLocked)
-                    }
-                    .animation(.easeIn(duration: 0.35).delay(0.55), value: !isLocked)
+                ZStack {
+                    image(name: "arrowshape.right", isShown: isLocked)
+                    image(name: "lock.open", isShown: !isLocked)
                 }
-                    .buttonStyle(UnlockButtonStyle()),
-                    alignment: .trailing
+                    .animation(.easeIn(duration: 0.35), value: !isLocked),
+                alignment: .trailing
             )
-            .simultaneousGesture(
+            .gesture(
                 DragGesture()
                     .onChanged { value in
                         guard isLocked else { return }
@@ -45,14 +40,13 @@ struct DragComponent: View {
                     }
                     .onEnded { value in
                         guard isLocked else { return }
+                        hapticResponse()
                         if width < maxWidth {
                             width = minWidth
-                            // add some haptics
-                            UINotificationFeedbackGenerator().notificationOccurred(.warning)
                         } else {
-                            // add some haptics
-                            UINotificationFeedbackGenerator().notificationOccurred(.success)
-                            withAnimation(.spring().delay(0.3)) {
+                            hapticResponse()
+                            action()
+                            withAnimation(.spring()) {
                                 isLocked = false
                             }
                         }
@@ -71,6 +65,12 @@ struct DragComponent: View {
             .opacity(isShown ? 1 : 0)
             .scaleEffect(isShown ? 1 : 0.01)
     }
+
+    func hapticResponse() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        let haptic = UINotificationFeedbackGenerator()
+        haptic.notificationOccurred(.success)
+    }
 }
 
 struct DragComponent_Previews: PreviewProvider {
@@ -78,7 +78,7 @@ struct DragComponent_Previews: PreviewProvider {
         DragComponent(
             isLocked: .constant(true),
             action: {
-
+                
             },
             maxWidth: 50
         )

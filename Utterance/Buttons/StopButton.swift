@@ -23,8 +23,8 @@ struct StopButton_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
             StopButton(action: {
+
             })
-            .padding()
         }
     }
 }

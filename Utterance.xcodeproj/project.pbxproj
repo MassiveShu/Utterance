@@ -13,6 +13,7 @@
 		E61EB6F52952195D0057608E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* HomeView.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
+		E6C196FE29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */; };
 		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
 		E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319C2955F0DC000AAB26 /* StopButton.swift */; };
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
@@ -23,6 +24,7 @@
 		E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */; };
 		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
 		E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */; };
+		E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		E61EB6F42952195D0057608E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E61EB6F62952195E0057608E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EB6F92952195E0057608E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SfDistantGalaxyOutline-xoeO.ttf"; sourceTree = "<group>"; };
 		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		E6C6319C2955F0DC000AAB26 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
@@ -43,6 +46,8 @@
 		E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButtonView.swift; sourceTree = "<group>"; };
 		E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStarsAnimation.swift; sourceTree = "<group>"; };
+		E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
+		E6D5BB7C295755A900DEE0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +80,13 @@
 		E61EB6F12952195D0057608E /* Utterance */ = {
 			isa = PBXGroup;
 			children = (
+				E6D5BB792957545500DEE0B0 /* Font */,
 				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E61EB6F42952195D0057608E /* HomeView.swift */,
 				E6D5BB752957255200DEE0B0 /* Onboarding */,
 				E6D5BB672957134800DEE0B0 /* Buttons */,
 				E61EB6F62952195E0057608E /* Assets.xcassets */,
+				E6D5BB7C295755A900DEE0B0 /* Info.plist */,
 				E61EB6F82952195E0057608E /* Preview Content */,
 			);
 			path = Utterance;
@@ -120,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
+				E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -133,6 +141,14 @@
 				E6D5BB6A2957134800DEE0B0 /* UnlockButtonStyle.swift */,
 			);
 			path = ButtonStyle;
+			sourceTree = "<group>";
+		};
+		E6D5BB792957545500DEE0B0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */,
+				E6C196FE29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf in Resources */,
 				E61EB6F72952195E0057608E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +224,7 @@
 			files = (
 				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,
 				E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */,
+				E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
@@ -352,6 +370,7 @@
 				DEVELOPMENT_TEAM = 2639MC89ZJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Utterance/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -386,6 +405,7 @@
 				DEVELOPMENT_TEAM = 2639MC89ZJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Utterance/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

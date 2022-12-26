@@ -9,12 +9,12 @@ import SwiftUI
 
 struct BackgroundComponent: View {
     var body: some View {
-        ZStack(alignment: .leading) {
+        ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color.lightBlueSW)
-            
+
             Text("Let's go")
-                .font(.body)
+                .font(.title2)
                 .bold()
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)

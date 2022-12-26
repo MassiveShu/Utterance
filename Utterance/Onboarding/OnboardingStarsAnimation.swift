@@ -46,6 +46,8 @@ struct OnboardingStarsAnimation: View {
                     }
                 }
             }
+            .navigationBarBackButtonHidden(true)
+            .frame(width: 500, height: 400)
         }
     }
     
