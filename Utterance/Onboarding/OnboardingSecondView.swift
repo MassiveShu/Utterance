@@ -19,6 +19,7 @@ struct OnboardingSecondView: View {
                     .multilineTextAlignment(.center)
                     .lineSpacing(10)
 
+                VoiceActingGender()
                 Spacer()
             }
             .padding(.horizontal, 15)
