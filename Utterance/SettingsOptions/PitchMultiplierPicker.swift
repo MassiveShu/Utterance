@@ -6,38 +6,61 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct PitchMultiplierPicker: View {
-    @State private var selectedPitch = 1
-    private var pitchOptions = ["0.5", "1.0", "1.5", "2.0"]
+    enum Pitch: String, Identifiable, CaseIterable {
+        case lowPitch = "0.5"
+        case normalPitch = "1.0"
+        case midPitch = "1.5"
+        case highPitch = "2.0"
+
+        var id: String {
+            self.rawValue
+        }
+    }
+
+    private enum Constant {
+        static let hStackSpacing: CGFloat = 25
+        static let textPadding: CGFloat = 15
+    }
+
+    let pitches: [Pitch] = Pitch.allCases
+    @Binding var selectedPitch: Pitch
 
     var body: some View {
-//        VStack {
-//            Text("Pitch:")
-//                .font(.subheadline.bold())
-//                .foregroundColor(.white)
-
-            Picker("", selection: $selectedPitch) {
-                ForEach(0..<pitchOptions.count, id: \.self) {
-                    Text(self.pitchOptions[$0])
-                        .foregroundColor(Color.black)
+        HStack(spacing: Constant.hStackSpacing) {
+            ForEach(pitches) { pitch in
+                let isSelected = pitch == selectedPitch
+                VStack {
+                    Text(pitch.rawValue)
+                        .font(.headline.bold())
+                        .padding(Constant.textPadding)
+                        .foregroundColor(isSelected ? Color.white : .black)
+                        .background(isSelected ? Color.lightBlueSW : .yellowSW)
+                        .clipShape(Circle())
                 }
-            }
-            .pickerStyle(.segmented)
-            .onAppear {
-                UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-                UISegmentedControl.appearance().backgroundColor = UIColor(Color.yellowSW)
-                UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.lightBlueSW)
+                .onTapGesture(perform: {
+                    selectedPitch = pitch
+                    hapticResponse()
+                })
             }
         }
-//        .background(Color.black)
-//        .padding()
-//    }
+        .animation(.interactiveSpring(), value: selectedPitch)
+    }
+
+    func hapticResponse() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        let haptic = UINotificationFeedbackGenerator()
+        haptic.notificationOccurred(.success)
+    }
 }
 
 struct PitchMultiplierPicker_Previews: PreviewProvider {
+    @State static var pitch: PitchMultiplierPicker.Pitch = .normalPitch
+
     static var previews: some View {
-        PitchMultiplierPicker()
+        PitchMultiplierPicker(selectedPitch: $pitch)
             .previewLayout(.sizeThatFits)
     }
 }

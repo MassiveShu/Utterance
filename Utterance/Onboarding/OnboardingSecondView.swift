@@ -40,7 +40,7 @@ struct OnboardingSecondView: View {
                     Text("Pitch:")
                         .font(.subheadline.bold())
                         .foregroundColor(.white)
-                    PitchMultiplierPicker()
+                    PitchMultiplierPicker(selectedPitch: $viewModel.activePitch)
                 }
                 .padding()
                 Spacer()
