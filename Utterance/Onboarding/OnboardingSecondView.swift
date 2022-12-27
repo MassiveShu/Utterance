@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct OnboardingSecondView: View {
-
     @ObservedObject private var viewModel = ViewModel()
 
     var body: some View {
