@@ -6,37 +6,61 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct SpeechRatePicker: View {
-    @State private var selectedRate = 2
-    private var rateOptions = ["0.25", "0.50", "1.0", "2.0"]
+    enum Rate: String, Identifiable, CaseIterable {
+        case lowRate = "0.25"
+        case midRate = "0.50"
+        case normalRate = "1.0"
+        case highRate = "2.0"
+
+        var id: String {
+            self.rawValue
+        }
+    }
+
+    private enum Constant {
+        static let hStackSpacing: CGFloat = 25
+        static let textPadding: CGFloat = 15
+    }
+
+    let rates: [Rate] = Rate.allCases
+    @Binding var selectedRate: Rate
 
     var body: some View {
-//        VStack {
-//            Text("Rate:")
-//                .font(.subheadline.bold())
-//                .foregroundColor(.white)
-
-            Picker("", selection: $selectedRate) {
-                ForEach(0..<rateOptions.count, id: \.self) {
-                    Text(self.rateOptions[$0])
+        HStack(spacing: Constant.hStackSpacing) {
+            ForEach(rates) { rate in
+                let isSelected = rate == selectedRate
+                VStack {
+                    Text(rate.rawValue)
+                        .font(.headline.bold())
+                        .padding(Constant.textPadding)
+                        .foregroundColor(isSelected ? Color.white : .black)
+                        .background(isSelected ? Color.lightBlueSW : .yellowSW)
+                        .clipShape(Circle())
                 }
+                .onTapGesture(perform: {
+                    selectedRate = rate
+                    hapticResponse()
+                })
             }
-            .pickerStyle(.segmented)
-            .onAppear {
-                UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-                UISegmentedControl.appearance().backgroundColor = UIColor(Color.yellowSW)
-                UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.lightBlueSW)
-            }
-//        }
-//        .background(Color.black)
-//        .padding()
+        }
+        .animation(.interactiveSpring(), value: selectedRate)
+    }
+
+    func hapticResponse() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        let haptic = UINotificationFeedbackGenerator()
+        haptic.notificationOccurred(.success)
     }
 }
 
 struct SpeechRatePicker_Previews: PreviewProvider {
+    @State static var rate: SpeechRatePicker.Rate = .normalRate
+    
     static var previews: some View {
-        SpeechRatePicker()
+        SpeechRatePicker(selectedRate: $rate)
             .previewLayout(.sizeThatFits)
     }
 }

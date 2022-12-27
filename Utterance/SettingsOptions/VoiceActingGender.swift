@@ -44,7 +44,7 @@ struct VoiceActingGender: View {
                 })
             }
         }
-        .animation(.spring(), value: selectedGender)
+        .animation(.interactiveSpring(), value: selectedGender)
     }
 
     func hapticResponse() {
@@ -56,6 +56,7 @@ struct VoiceActingGender: View {
 
 struct VoiceActingGender_Previews: PreviewProvider {
     @State static var gender: VoiceActingGender.Gender = .male
+    
     static var previews: some View {
         VoiceActingGender(selectedGender: $gender)
             .previewLayout(.sizeThatFits)
