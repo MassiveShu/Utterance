@@ -11,6 +11,7 @@
 		E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */; };
 		E60FD434295B0A3E00F6EBC2 /* VoiceActingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */; };
 		E60FD436295B121200F6EBC2 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD435295B121200F6EBC2 /* VolumeSlider.swift */; };
+		E60FD43A295B16E900F6EBC2 /* SpeechRatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD439295B16E900F6EBC2 /* SpeechRatePicker.swift */; };
 		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E61EB6F52952195D0057608E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* HomeView.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtonStyle.swift; sourceTree = "<group>"; };
 		E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActingGender.swift; sourceTree = "<group>"; };
 		E60FD435295B121200F6EBC2 /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
+		E60FD439295B16E900F6EBC2 /* SpeechRatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRatePicker.swift; sourceTree = "<group>"; };
 		E61EB6EF2952195D0057608E /* Utterance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utterance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61EB6F22952195D0057608E /* UtteranceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceApp.swift; sourceTree = "<group>"; };
 		E61EB6F42952195D0057608E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */,
 				E60FD435295B121200F6EBC2 /* VolumeSlider.swift */,
+				E60FD439295B16E900F6EBC2 /* SpeechRatePicker.swift */,
 			);
 			path = SettingsOptions;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */,
 				E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */,
 				E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */,
+				E60FD43A295B16E900F6EBC2 /* SpeechRatePicker.swift in Sources */,
 				E6D5BB6F2957134800DEE0B0 /* UnlockButtonStyle.swift in Sources */,
 				E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */,
 			);

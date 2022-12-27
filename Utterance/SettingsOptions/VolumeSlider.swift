@@ -13,7 +13,7 @@ struct VolumeSlider: View {
     var body: some View {
         VStack {
             Text("Volume: \(volumeLevel, specifier: "%.0f")")
-                .font(.subheadline)
+                .font(.subheadline.bold())
                 .foregroundColor(.white)
             
             Slider(value: $volumeLevel, in: 0...100)

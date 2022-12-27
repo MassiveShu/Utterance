@@ -1,5 +1,5 @@
 //
-//  VoiceActingGender.swift
+//  SpeechRatePicker.swift
 //  Utterance
 //
 //  Created by Max Shu on 27.12.2022.
@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct VoiceActingGender: View {
-    @State private var selectedGender: Int = 0
-    private var genderOptions = ["🙋‍♂️Male", "🙋‍♀️Feemale"]
-    
+struct SpeechRatePicker: View {
+    @State private var selectedRate = 2
+    private var rateOptions = ["0.25", "0.50", "1.0", "2.0"]
+
     var body: some View {
         VStack {
-            Text("Voice acting gender:")
+            Text("Rate:")
                 .font(.subheadline.bold())
                 .foregroundColor(.white)
 
-            Picker("", selection: $selectedGender) {
-                ForEach(0..<genderOptions.count, id: \.self) {
-                    Text(self.genderOptions[$0])
+            Picker("", selection: $selectedRate) {
+                ForEach(0..<rateOptions.count, id: \.self) {
+                    Text(self.rateOptions[$0])
                 }
             }
             .pickerStyle(.segmented)
@@ -34,8 +34,8 @@ struct VoiceActingGender: View {
     }
 }
 
-struct VoiceActingGender_Previews: PreviewProvider {
+struct SpeechRatePicker_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceActingGender()
+        SpeechRatePicker()
     }
 }

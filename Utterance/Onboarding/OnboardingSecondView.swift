@@ -22,6 +22,8 @@ struct OnboardingSecondView: View {
                 VoiceActingGender()
 
                 VolumeSlider()
+
+                SpeechRatePicker()
                 
                 Spacer()
             }
