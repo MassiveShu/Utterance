@@ -10,6 +10,7 @@
 		E600C80E2955E918004F4EB5 /* SetupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80D2955E918004F4EB5 /* SetupButton.swift */; };
 		E600C8102955E97B004F4EB5 /* SetupButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */; };
 		E60FD434295B0A3E00F6EBC2 /* VoiceActingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */; };
+		E60FD436295B121200F6EBC2 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD435295B121200F6EBC2 /* VolumeSlider.swift */; };
 		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E61EB6F52952195D0057608E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F42952195D0057608E /* HomeView.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		E600C80D2955E918004F4EB5 /* SetupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButton.swift; sourceTree = "<group>"; };
 		E600C80F2955E97B004F4EB5 /* SetupButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtonStyle.swift; sourceTree = "<group>"; };
 		E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActingGender.swift; sourceTree = "<group>"; };
+		E60FD435295B121200F6EBC2 /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
 		E61EB6EF2952195D0057608E /* Utterance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utterance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61EB6F22952195D0057608E /* UtteranceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceApp.swift; sourceTree = "<group>"; };
 		E61EB6F42952195D0057608E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */,
+				E60FD435295B121200F6EBC2 /* VolumeSlider.swift */,
 			);
 			path = SettingsOptions;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6FB90B6295A19770070FCD2 /* FontExtension.swift in Sources */,
+				E60FD436295B121200F6EBC2 /* VolumeSlider.swift in Sources */,
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
 				E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */,
 				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,

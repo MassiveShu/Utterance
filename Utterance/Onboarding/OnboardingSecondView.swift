@@ -20,6 +20,9 @@ struct OnboardingSecondView: View {
                     .lineSpacing(10)
 
                 VoiceActingGender()
+
+                VolumeSlider()
+                
                 Spacer()
             }
             .padding(.horizontal, 15)
