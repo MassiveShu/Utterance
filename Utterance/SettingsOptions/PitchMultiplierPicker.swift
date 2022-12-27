@@ -1,5 +1,5 @@
 //
-//  SpeechRatePicker.swift
+//  PitchMultiplierPicker.swift
 //  Utterance
 //
 //  Created by Max Shu on 27.12.2022.
@@ -7,19 +7,20 @@
 
 import SwiftUI
 
-struct SpeechRatePicker: View {
-    @State private var selectedRate = 2
-    private var rateOptions = ["0.25", "0.50", "1.0", "2.0"]
+struct PitchMultiplierPicker: View {
+    @State private var selectedPitch = 1
+    private var pitchOptions = ["0.5", "1.0", "1.5", "2.0"]
 
     var body: some View {
 //        VStack {
-//            Text("Rate:")
+//            Text("Pitch:")
 //                .font(.subheadline.bold())
 //                .foregroundColor(.white)
 
-            Picker("", selection: $selectedRate) {
-                ForEach(0..<rateOptions.count, id: \.self) {
-                    Text(self.rateOptions[$0])
+            Picker("", selection: $selectedPitch) {
+                ForEach(0..<pitchOptions.count, id: \.self) {
+                    Text(self.pitchOptions[$0])
+                        .foregroundColor(Color.black)
                 }
             }
             .pickerStyle(.segmented)
@@ -28,15 +29,15 @@ struct SpeechRatePicker: View {
                 UISegmentedControl.appearance().backgroundColor = UIColor(Color.yellowSW)
                 UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.lightBlueSW)
             }
-//        }
+        }
 //        .background(Color.black)
 //        .padding()
-    }
+//    }
 }
 
-struct SpeechRatePicker_Previews: PreviewProvider {
+struct PitchMultiplierPicker_Previews: PreviewProvider {
     static var previews: some View {
-        SpeechRatePicker()
+        PitchMultiplierPicker()
             .previewLayout(.sizeThatFits)
     }
 }

@@ -6,36 +6,58 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct VoiceActingGender: View {
-    @State private var selectedGender: Int = 0
-    private var genderOptions = ["🙋‍♂️Male", "🙋‍♀️Feemale"]
-    
-    var body: some View {
-        VStack {
-            Text("Voice acting gender:")
-                .font(.subheadline.bold())
-                .foregroundColor(.white)
+    enum Gender: String, Identifiable, CaseIterable {
+        case male = "♂︎ Male"
+        case feemale = "⚲ Female"
 
-            Picker("", selection: $selectedGender) {
-                ForEach(0..<genderOptions.count, id: \.self) {
-                    Text(self.genderOptions[$0])
+        var id: String {
+            self.rawValue
+        }
+    }
+
+    private enum Constant {
+        static let hStackSpacing: CGFloat = 25
+        static let textPadding: CGFloat = 15
+    }
+
+    let genders: [Gender] = Gender.allCases
+    @Binding var selectedGender: Gender
+
+    var body: some View {
+        HStack(spacing: Constant.hStackSpacing) {
+            ForEach(genders) { gender in
+                let isSelected = gender == selectedGender
+                VStack {
+                    Text(gender.rawValue)
+                        .font(.headline.bold())
+                        .padding(Constant.textPadding)
+                        .foregroundColor(isSelected ? Color.white : .black)
+                        .background(isSelected ? Color.lightBlueSW : .yellowSW)
+                        .clipShape(Capsule())
                 }
+                .onTapGesture(perform: {
+                    selectedGender = gender
+                    hapticResponse()
+                })
             }
-            .pickerStyle(.segmented)
         }
-        .onAppear {
-            UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-            UISegmentedControl.appearance().backgroundColor = UIColor(Color.yellowSW)
-            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.lightBlueSW)
-        }
-        .background(Color.black)
-        .padding()
+        .animation(.spring(), value: selectedGender)
+    }
+
+    func hapticResponse() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        let haptic = UINotificationFeedbackGenerator()
+        haptic.notificationOccurred(.success)
     }
 }
 
 struct VoiceActingGender_Previews: PreviewProvider {
+    @State static var gender: VoiceActingGender.Gender = .male
     static var previews: some View {
-        VoiceActingGender()
+        VoiceActingGender(selectedGender: $gender)
+            .previewLayout(.sizeThatFits)
     }
 }
