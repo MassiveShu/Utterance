@@ -28,9 +28,9 @@
 		E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6B2957134800DEE0B0 /* BackgroundComponent.swift */; };
 		E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */; };
 		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
-		E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */; };
+		E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */; };
 		E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */; };
-		E6FB90AE295A11F00070FCD2 /* OnboardingSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90AD295A11F00070FCD2 /* OnboardingSecondView.swift */; };
+		E6FB90AE295A11F00070FCD2 /* UtteranceConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90AD295A11F00070FCD2 /* UtteranceConfigurationView.swift */; };
 		E6FB90B6295A19770070FCD2 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90B5295A19770070FCD2 /* FontExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,10 +57,10 @@
 		E6D5BB6B2957134800DEE0B0 /* BackgroundComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundComponent.swift; sourceTree = "<group>"; };
 		E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButtonView.swift; sourceTree = "<group>"; };
-		E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStarsAnimation.swift; sourceTree = "<group>"; };
+		E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsAnimationView.swift; sourceTree = "<group>"; };
 		E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
 		E6D5BB7C295755A900DEE0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6FB90AD295A11F00070FCD2 /* OnboardingSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondView.swift; sourceTree = "<group>"; };
+		E6FB90AD295A11F00070FCD2 /* UtteranceConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceConfigurationView.swift; sourceTree = "<group>"; };
 		E6FB90B5295A19770070FCD2 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +109,7 @@
 				E61EB6F42952195D0057608E /* HomeView.swift */,
 				E60FD43E295B36B900F6EBC2 /* ViewModel.swift */,
 				E6D5BB752957255200DEE0B0 /* Onboarding */,
+				E6B290D7295CAAAE00DD8688 /* View */,
 				E6D5BB672957134800DEE0B0 /* Buttons */,
 				E60FD430295AFCBD00F6EBC2 /* SettingsOptions */,
 				E6D5BB792957545500DEE0B0 /* Font */,
@@ -125,6 +126,15 @@
 				E61EB6F92952195E0057608E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6B290D7295CAAAE00DD8688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6FB90AD295A11F00070FCD2 /* UtteranceConfigurationView.swift */,
+				E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E6D5BB672957134800DEE0B0 /* Buttons */ = {
@@ -153,9 +163,7 @@
 		E6D5BB752957255200DEE0B0 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				E6D5BB732957136200DEE0B0 /* OnboardingStarsAnimation.swift */,
 				E6D5BB7729572C5800DEE0B0 /* OnboardingStartView.swift */,
-				E6FB90AD295A11F00070FCD2 /* OnboardingSecondView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -255,7 +263,7 @@
 				E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */,
 				E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */,
 				E60FD434295B0A3E00F6EBC2 /* VoiceActingGender.swift in Sources */,
-				E6FB90AE295A11F00070FCD2 /* OnboardingSecondView.swift in Sources */,
+				E6FB90AE295A11F00070FCD2 /* UtteranceConfigurationView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6FB90B6295A19770070FCD2 /* FontExtension.swift in Sources */,
@@ -264,7 +272,7 @@
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
 				E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */,
 				E61EB6F52952195D0057608E /* HomeView.swift in Sources */,
-				E6D5BB742957136200DEE0B0 /* OnboardingStarsAnimation.swift in Sources */,
+				E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */,
 				E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E600C80E2955E918004F4EB5 /* SetupButton.swift in Sources */,

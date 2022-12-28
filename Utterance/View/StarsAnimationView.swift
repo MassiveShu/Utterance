@@ -1,5 +1,5 @@
 //
-//  OnboardingStarsAnimation.swift
+//  StarsAnimationView.swift
 //  Utterance
 //
 //  Created by Max Shu on 23.12.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingStarsAnimation: View {
+struct StarsAnimationView: View {
     private enum Constant {
         static let numberOfStars = 0..<5
         static let linesOfStars = 0..<10
@@ -56,8 +56,8 @@ struct OnboardingStarsAnimation: View {
     }
 }
 
-struct OnboardingStarsAnimation_Previews: PreviewProvider {
+struct StarsAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingStarsAnimation()
+        StarsAnimationView()
     }
 }
