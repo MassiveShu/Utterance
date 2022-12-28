@@ -35,6 +35,7 @@ struct VoiceActingGender: View {
                         .font(.headline.bold())
                         .padding(Constant.textPadding)
                         .foregroundColor(isSelected ? Color.white : .black)
+                        .frame(minWidth: 110)
                         .background(isSelected ? Color.lightBlueSW : .yellowSW)
                         .clipShape(Capsule())
                 }
