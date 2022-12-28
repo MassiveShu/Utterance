@@ -9,16 +9,18 @@ import SwiftUI
 import CoreHaptics
 
 struct VolumeSlider: View {
-    @State private var volumeLevel: Float = 100
-    
+    @Binding var activeVolume: Float
+
     var body: some View {
-        Slider(value: $volumeLevel, in: 0...100)
+        Slider(value: $activeVolume, in: 0...1)
     }
 }
 
 struct VolumeSlider_Previews: PreviewProvider {
+    @State static var volume: Float = 1
+
     static var previews: some View {
-        VolumeSlider()
+        VolumeSlider(activeVolume: $volume)
             .previewLayout(.sizeThatFits)
     }
 }

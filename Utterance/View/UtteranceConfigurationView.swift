@@ -32,7 +32,7 @@ struct UtteranceConfigurationView: View {
                     Text("Volume:")
                         .font(.title3.bold())
                         .foregroundColor(.white)
-                    VolumeSlider()
+                    VolumeSlider(activeVolume: $viewModel.activeVolume)
 
                     RateStepper()
 
