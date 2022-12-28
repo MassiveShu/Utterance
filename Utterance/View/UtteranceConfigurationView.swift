@@ -17,7 +17,7 @@ struct UtteranceConfigurationView: View {
             StarsAnimationView()
 
             VStack {
-                Text("The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space...")
+                Text(viewModel.activeText)
                     .font(.starWarsFont(size: 22))
                     .foregroundColor(Color.yellowSW)
                     .multilineTextAlignment(.center)
