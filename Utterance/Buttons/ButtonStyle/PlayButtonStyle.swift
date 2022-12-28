@@ -11,7 +11,7 @@ struct PlayButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.largeTitle.bold())
-            .frame(minWidth: 150)
+            .frame(minWidth: 130)
             .background(configuration.isPressed ? Color.yellowSW : .lightBlueSW)
             .foregroundColor(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 25))
