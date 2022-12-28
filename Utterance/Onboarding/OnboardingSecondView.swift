@@ -26,18 +26,19 @@ struct OnboardingSecondView: View {
                         .font(.subheadline.bold())
                         .foregroundColor(.white)
                     VoiceActingGender(selectedGender: $viewModel.activeGender)
+                        .padding()
 
                     Text("Volume:")
                         .font(.subheadline.bold())
                         .foregroundColor(.white)
                     VolumeSlider()
+                        .padding()
 
-                    Text("Rate:")
-                        .font(.subheadline.bold())
-                        .foregroundColor(.white)
-                    SpeechRatePicker()
+                    RateStepper()
+                        .padding()
 
-                    PitchMultiplierPicker()
+                    PitchStepper()
+                        .padding()
                 }
                 .padding()
                 Spacer()

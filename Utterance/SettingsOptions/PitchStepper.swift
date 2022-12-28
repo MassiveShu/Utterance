@@ -1,5 +1,5 @@
 //
-//  PitchMultiplierPicker.swift
+//  PitchStepper.swift
 //  Utterance
 //
 //  Created by Max Shu on 27.12.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PitchMultiplierPicker: View {
+struct PitchStepper: View {
     @State private var pitchValue = 1.0
 
     let step = 0.5
@@ -29,9 +29,9 @@ struct PitchMultiplierPicker: View {
 }
 
 
-struct PitchMultiplierPicker_Previews: PreviewProvider {
+struct PitchStepper_Previews: PreviewProvider {
     static var previews: some View {
-        PitchMultiplierPicker()
+        PitchStepper()
             .previewLayout(.sizeThatFits)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  SpeechRatePicker.swift
+//  RateStepper.swift
 //  Utterance
 //
 //  Created by Max Shu on 27.12.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SpeechRatePicker: View {
+struct RateStepper: View {
     @State private var rateValue = 1.0
 
     let step = 0.25
@@ -28,9 +28,9 @@ struct SpeechRatePicker: View {
     }
 }
 
-struct SpeechRatePicker_Previews: PreviewProvider {
+struct RateStepper_Previews: PreviewProvider {
     static var previews: some View {
-        SpeechRatePicker()
+        RateStepper()
             .previewLayout(.sizeThatFits)
     }
 }
