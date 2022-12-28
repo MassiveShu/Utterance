@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct PitchStepper: View {
-    @State private var pitchValue = 1.0
+//    @State private var pitchValue = 1.0
+    @Binding var pitchValue: Float
 
-    let step = 0.5
-    let range = 0.5...2.0
+    let step: Float = 0.5
 
     var body: some View {
         VStack {
             Stepper("Pitch: \(String(format: "%.1f", pitchValue))",
                     value: $pitchValue,
-                    in: range,
+                    in: 0.5...2.0,
                     step: step
             )
         }
@@ -31,8 +31,10 @@ struct PitchStepper: View {
 
 
 struct PitchStepper_Previews: PreviewProvider {
+    @State static var pitch: Float = 1
+
     static var previews: some View {
-        PitchStepper()
+        PitchStepper(pitchValue: $pitch)
             .previewLayout(.sizeThatFits)
     }
 }

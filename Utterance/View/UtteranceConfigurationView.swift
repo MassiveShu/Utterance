@@ -32,20 +32,21 @@ struct UtteranceConfigurationView: View {
                     Text("Volume:")
                         .font(.title3.bold())
                         .foregroundColor(.white)
+
                     VolumeSlider(activeVolume: $viewModel.activeVolume)
 
                     RateStepper(rateValue: $viewModel.activeRate)
 
-                    PitchStepper()
+                    PitchStepper(pitchValue: $viewModel.activePitch)
                 }
                 .padding()
+                
                 Spacer()
             }
             .padding(50)
 
             VStack {
                 Spacer()
-                
                 PlayButton(action: playAction)
             }
             .padding(.bottom, 25)
