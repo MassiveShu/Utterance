@@ -37,10 +37,7 @@ struct OnboardingSecondView: View {
                         .foregroundColor(.white)
                     SpeechRatePicker(selectedRate: $viewModel.activeRate)
 
-                    Text("Pitch:")
-                        .font(.subheadline.bold())
-                        .foregroundColor(.white)
-                    PitchMultiplierPicker(selectedPitch: $viewModel.activePitch)
+                    PitchMultiplierPicker()
                 }
                 .padding()
                 Spacer()

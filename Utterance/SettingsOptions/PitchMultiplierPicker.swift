@@ -6,61 +6,32 @@
 //
 
 import SwiftUI
-import CoreHaptics
 
 struct PitchMultiplierPicker: View {
-    enum Pitch: String, Identifiable, CaseIterable {
-        case lowPitch = "0.5"
-        case normalPitch = "1.0"
-        case midPitch = "1.5"
-        case highPitch = "2.0"
+    @State private var pitchValue = 1.0
 
-        var id: String {
-            self.rawValue
-        }
-    }
-
-    private enum Constant {
-        static let hStackSpacing: CGFloat = 25
-        static let textPadding: CGFloat = 15
-    }
-
-    let pitches: [Pitch] = Pitch.allCases
-    @Binding var selectedPitch: Pitch
+    let step = 0.5
+    let range = 0.5...2.0
 
     var body: some View {
-        HStack(spacing: Constant.hStackSpacing) {
-            ForEach(pitches) { pitch in
-                let isSelected = pitch == selectedPitch
-                VStack {
-                    Text(pitch.rawValue)
-                        .font(.headline.bold())
-                        .padding(Constant.textPadding)
-                        .foregroundColor(isSelected ? Color.white : .black)
-                        .background(isSelected ? Color.lightBlueSW : .yellowSW)
-                        .clipShape(Circle())
-                }
-                .onTapGesture(perform: {
-                    selectedPitch = pitch
-                    hapticResponse()
-                })
-            }
+        VStack {
+            Stepper("Pitch: \(String(format: "%.1f", pitchValue))",
+                    value: $pitchValue,
+                    in: range,
+                    step: step
+            )
         }
-        .animation(.interactiveSpring(), value: selectedPitch)
-    }
-
-    func hapticResponse() {
-        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-        let haptic = UINotificationFeedbackGenerator()
-        haptic.notificationOccurred(.success)
+        .padding(10)
+        .font(.headline.bold())
+        .background(Color.yellowSW)
+        .clipShape(Capsule())
     }
 }
 
-struct PitchMultiplierPicker_Previews: PreviewProvider {
-    @State static var pitch: PitchMultiplierPicker.Pitch = .normalPitch
 
+struct PitchMultiplierPicker_Previews: PreviewProvider {
     static var previews: some View {
-        PitchMultiplierPicker(selectedPitch: $pitch)
+        PitchMultiplierPicker()
             .previewLayout(.sizeThatFits)
     }
 }

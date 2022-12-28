@@ -13,7 +13,6 @@ struct VolumeSlider: View {
     
     var body: some View {
         Slider(value: $volumeLevel, in: 0...100)
-        
     }
 }
 
