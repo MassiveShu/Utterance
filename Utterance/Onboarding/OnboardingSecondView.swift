@@ -35,7 +35,7 @@ struct OnboardingSecondView: View {
                     Text("Rate:")
                         .font(.subheadline.bold())
                         .foregroundColor(.white)
-                    SpeechRatePicker(selectedRate: $viewModel.activeRate)
+                    SpeechRatePicker()
 
                     PitchMultiplierPicker()
                 }

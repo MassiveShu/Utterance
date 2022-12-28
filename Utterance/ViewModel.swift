@@ -10,6 +10,6 @@ import SwiftUI
 
 final class ViewModel: ObservableObject {
     @Published var activeGender: VoiceActingGender.Gender = .male
-    @Published var activeRate: SpeechRatePicker.Rate = .normalRate
-//    @Published var activePitch: PitchMultiplierPicker.Pitch = .normalPitch
+    // @Published var activeRate: SpeechRatePicker.Rate = .normalRate
+    // @Published var activePitch: PitchMultiplierPicker.Pitch = .normalPitch
 }
