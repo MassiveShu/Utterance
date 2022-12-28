@@ -23,29 +23,24 @@ struct UtteranceConfigurationView: View {
                     .multilineTextAlignment(.center)
                     .lineSpacing(10)
 
-                VStack {
+                VStack(spacing: 25) {
                     Text("Voice acting gender:")
-                        .font(.subheadline.bold())
+                        .font(.title3.bold())
                         .foregroundColor(.white)
                     VoiceActingGender(selectedGender: $viewModel.activeGender)
-                        .padding()
 
                     Text("Volume:")
-                        .font(.subheadline.bold())
+                        .font(.title3.bold())
                         .foregroundColor(.white)
                     VolumeSlider()
-                        .padding()
 
                     RateStepper()
-                        .padding()
 
                     PitchStepper()
-                        .padding()
                 }
                 .padding()
                 Spacer()
             }
-            .padding(.horizontal, 15)
             .padding(50)
 
             VStack {

@@ -32,7 +32,7 @@ struct VoiceActingGender: View {
                 let isSelected = gender == selectedGender
                 VStack {
                     Text(gender.rawValue)
-                        .font(.headline.bold())
+                        .font(.title3.bold())
                         .padding(Constant.textPadding)
                         .foregroundColor(isSelected ? Color.white : .black)
                         .frame(minWidth: 110)

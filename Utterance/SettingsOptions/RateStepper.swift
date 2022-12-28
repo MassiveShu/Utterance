@@ -22,7 +22,8 @@ struct RateStepper: View {
             )
         }
         .padding(10)
-        .font(.headline.bold())
+        .font(.title3.bold())
+        .foregroundColor(.black)
         .background(Color.yellowSW)
         .clipShape(Capsule())
     }
