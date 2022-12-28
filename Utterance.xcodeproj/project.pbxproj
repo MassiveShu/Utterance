@@ -17,9 +17,7 @@
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
 		E6C196FE29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */; };
 		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
-		E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319C2955F0DC000AAB26 /* StopButton.swift */; };
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
-		E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */; };
 		E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB692957134800DEE0B0 /* DragComponent.swift */; };
 		E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6B2957134800DEE0B0 /* BackgroundComponent.swift */; };
 		E6D5BB712957134800DEE0B0 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */; };
@@ -42,9 +40,7 @@
 		E61EB6F92952195E0057608E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SfDistantGalaxyOutline-xoeO.ttf"; sourceTree = "<group>"; };
 		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
-		E6C6319C2955F0DC000AAB26 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
-		E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButtonStyle.swift; sourceTree = "<group>"; };
 		E6D5BB692957134800DEE0B0 /* DragComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragComponent.swift; sourceTree = "<group>"; };
 		E6D5BB6B2957134800DEE0B0 /* BackgroundComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundComponent.swift; sourceTree = "<group>"; };
 		E6D5BB6C2957134800DEE0B0 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
@@ -133,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				E6C6319A2955F0D5000AAB26 /* PlayButton.swift */,
-				E6C6319C2955F0DC000AAB26 /* StopButton.swift */,
 				E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */,
 				E6D5BB682957134800DEE0B0 /* ButtonComponents */,
 				E6D5BB762957259C00DEE0B0 /* ButtonStyle */,
@@ -161,7 +156,6 @@
 		E6D5BB762957259C00DEE0B0 /* ButtonStyle */ = {
 			isa = PBXGroup;
 			children = (
-				E6C631A02955F0F7000AAB26 /* StopButtonStyle.swift */,
 				E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */,
 			);
 			path = ButtonStyle;
@@ -247,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6C6319D2955F0DC000AAB26 /* StopButton.swift in Sources */,
 				E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */,
 				E60FD434295B0A3E00F6EBC2 /* VoiceActingGender.swift in Sources */,
 				E6FB90AE295A11F00070FCD2 /* UtteranceConfigurationView.swift in Sources */,
@@ -257,7 +250,6 @@
 				E60FD43C295B284100F6EBC2 /* PitchStepper.swift in Sources */,
 				E60FD436295B121200F6EBC2 /* VolumeSlider.swift in Sources */,
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
-				E6C631A12955F0F7000AAB26 /* StopButtonStyle.swift in Sources */,
 				E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */,
 				E6D5BB702957134800DEE0B0 /* BackgroundComponent.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,

@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct PlayButton: View {
+    @State private var isPlaying: Bool = true
+    
     var action: () -> Void
-
+    
     var body: some View {
-        Button(action: action) {
-            Image(systemName: "play.circle")
+        Button(action: {
+            self.isPlaying.toggle()
+        }) {
+            Image(systemName: self.isPlaying == true ? "play.circle" : "stop.circle")
                 .padding()
         }
         .buttonStyle(PlayButtonStyle())
