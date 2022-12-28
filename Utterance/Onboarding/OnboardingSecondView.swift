@@ -16,7 +16,7 @@ struct OnboardingSecondView: View {
 
             VStack {
                 Text("The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space...")
-                    .font(.starWarsFont(.main, size: 22))
+                    .font(.starWarsFont(size: 22))
                     .foregroundColor(Color.yellowSW)
                     .multilineTextAlignment(.center)
                     .lineSpacing(10)
