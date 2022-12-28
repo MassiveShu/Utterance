@@ -29,7 +29,9 @@ struct OnboardingStartView: View {
                         }
                     })
                     .navigationDestination(isPresented: $isLocked) {
-                        OnboardingSecondView()
+                        OnboardingSecondView(playAction: {
+
+                        })
                     }
                 }
                 .padding(50)

@@ -10,6 +10,8 @@ import SwiftUI
 struct OnboardingSecondView: View {
     @ObservedObject private var viewModel = ViewModel()
 
+    let playAction: () -> Void
+
     var body: some View {
         ZStack {
             OnboardingStarsAnimation()
@@ -50,9 +52,7 @@ struct OnboardingSecondView: View {
                 Spacer()
                 
                 HStack {
-                    PlayButton(action: {
-
-                    })
+                    PlayButton(action: playAction)
                     .padding(70)
                     StopButton(action: {
 
@@ -66,6 +66,8 @@ struct OnboardingSecondView: View {
 
 struct OnboardingSecondView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingSecondView()
+        OnboardingSecondView(playAction: {
+            
+        })
     }
 }
