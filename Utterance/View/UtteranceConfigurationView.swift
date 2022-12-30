@@ -10,6 +10,8 @@ import SwiftUI
 struct UtteranceConfigurationView: View {
     @ObservedObject private var viewModel = ViewModel()
 
+    @FocusState private var endEditing: Bool
+
     let playAction: () -> Void
 
     var body: some View {
@@ -17,11 +19,22 @@ struct UtteranceConfigurationView: View {
             StarsAnimationView()
 
             VStack {
-                Text(viewModel.activeText)
+                TextField("", text: $viewModel.activeText, axis: .vertical)
                     .font(.starWarsFont(size: 22))
                     .foregroundColor(Color.yellowSW)
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(10)
+                    .padding()
+                    .lineSpacing(5)
+                    .lineLimit(5...10)
+                    .focused($endEditing)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+
+                            Button("Done") {
+                                endEditing = false
+                            }
+                        }
+                    }
 
                 VStack(spacing: 25) {
                     Text("Voice acting gender:")
@@ -36,7 +49,7 @@ struct UtteranceConfigurationView: View {
                     VolumeSlider(activeVolume: $viewModel.activeVolume)
 
                     RateStepper(rateValue: $viewModel.activeRate)
-
+                    
                     PitchStepper(pitchValue: $viewModel.activePitch)
                 }
                 .padding()
