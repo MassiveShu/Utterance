@@ -22,9 +22,8 @@ struct UtteranceConfigurationView: View {
                 TextField("", text: $viewModel.activeText, axis: .vertical)
                     .font(.starWarsFont(size: 22))
                     .foregroundColor(Color.yellowSW)
-                    .padding()
                     .lineSpacing(5)
-                    .lineLimit(5...10)
+                    .lineLimit(8...10)
                     .focused($endEditing)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
@@ -36,33 +35,25 @@ struct UtteranceConfigurationView: View {
                         }
                     }
 
-                VStack(spacing: 25) {
-                    Text("Voice acting gender:")
-                        .font(.title3.bold())
-                        .foregroundColor(.white)
-                    VoiceActingGender(selectedGender: $viewModel.activeGender)
+                Text("Voice acting gender:")
+                    .font(.title3.bold())
+                    .foregroundColor(.white)
+                VoiceActingGender(selectedGender: $viewModel.activeGender)
 
-                    Text("Volume:")
-                        .font(.title3.bold())
-                        .foregroundColor(.white)
+                Text("Volume:")
+                    .font(.title3.bold())
+                    .foregroundColor(.white)
+                VolumeSlider(activeVolume: $viewModel.activeVolume)
 
-                    VolumeSlider(activeVolume: $viewModel.activeVolume)
+                RateStepper(rateValue: $viewModel.activeRate)
 
-                    RateStepper(rateValue: $viewModel.activeRate)
+                PitchStepper(pitchValue: $viewModel.activePitch)
 
-                    PitchStepper(pitchValue: $viewModel.activePitch)
-                }
-                .padding()
-                
                 Spacer()
-            }
-            .padding(50)
 
-            VStack {
-                Spacer()
                 PlayButton(action: playAction)
             }
-            .padding(.bottom, 25)
+            .padding(50)
         }
     }
 }
