@@ -22,8 +22,8 @@ struct UtteranceConfigurationView: View {
                 TextField("", text: $viewModel.activeText, axis: .vertical)
                     .font(.starWarsFont(size: 22))
                     .foregroundColor(Color.yellowSW)
-                    .lineSpacing(5)
-                    .lineLimit(8...10)
+                    .lineSpacing(3)
+                    .lineLimit(6...8)
                     .focused($endEditing)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
