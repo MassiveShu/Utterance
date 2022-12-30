@@ -49,7 +49,7 @@ struct UtteranceConfigurationView: View {
                     VolumeSlider(activeVolume: $viewModel.activeVolume)
 
                     RateStepper(rateValue: $viewModel.activeRate)
-                    
+
                     PitchStepper(pitchValue: $viewModel.activePitch)
                 }
                 .padding()
