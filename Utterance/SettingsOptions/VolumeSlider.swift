@@ -12,7 +12,7 @@ struct VolumeSlider: View {
     @Binding var activeVolume: Float
 
     var body: some View {
-        Slider(value: $activeVolume, in: 0...1)
+        Slider(value: $activeVolume, in: 0...1, step: 0.1)
     }
 }
 
