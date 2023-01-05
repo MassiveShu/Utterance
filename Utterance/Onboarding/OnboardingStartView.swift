@@ -13,12 +13,12 @@ struct OnboardingStartView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                    OnboardingStarsAnimation()
+                    StarsAnimationView()
                 VStack {
                     Spacer()
 
                     Text("A long time ago, \nin a galaxy far, far away...")
-                        .font(.custom("SfDistantGalaxyOutline", size: 60))
+                        .font(.starWarsFont(size: 60))
                         .foregroundColor(Color.yellowSW)
 
                     Spacer()
@@ -29,7 +29,9 @@ struct OnboardingStartView: View {
                         }
                     })
                     .navigationDestination(isPresented: $isLocked) {
-                        OnboardingStarsAnimation()
+                        UtteranceConfigurationView(playAction: {
+
+                        })
                     }
                 }
                 .padding(50)
