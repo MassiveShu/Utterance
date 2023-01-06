@@ -28,19 +28,18 @@ struct UtteranceConfigurationView: View {
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             Spacer()
-
                             Button("Done") {
                                 endEditing = false
                             }
                         }
                     }
-
+                
                 Text("Voice acting gender:")
                     .font(.title3.bold())
                     .foregroundColor(.white)
                 VoiceActingGender(selectedGender: $viewModel.activeGender)
 
-                Text("Volume:")
+                Text("Current Volume:")
                     .font(.title3.bold())
                     .foregroundColor(.white)
                 VolumeSlider(activeVolume: $viewModel.activeVolume)

@@ -7,12 +7,21 @@
 
 import SwiftUI
 import CoreHaptics
+import MediaPlayer
 
 struct VolumeSlider: View {
     @Binding var activeVolume: Float
+    @ObservedObject private var viewModel = ViewModel()
+
+    private let range: ClosedRange<Float> = 0...1
+    private let step: Float = 0.1
 
     var body: some View {
-        Slider(value: $activeVolume, in: 0...1, step: 0.1)
+        Slider(
+            value: $viewModel.activeVolume,
+            in: range,
+            step: step
+        )
     }
 }
 
@@ -24,3 +33,5 @@ struct VolumeSlider_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
+
+
