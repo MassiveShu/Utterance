@@ -25,5 +25,6 @@ struct BackgroundComponent: View {
 struct BackgroundComponent_Previews: PreviewProvider {
     static var previews: some View {
         BackgroundComponent()
+            .previewLayout(.sizeThatFits)
     }
 }

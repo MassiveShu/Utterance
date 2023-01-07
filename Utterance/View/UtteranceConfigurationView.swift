@@ -9,15 +9,12 @@ import SwiftUI
 
 struct UtteranceConfigurationView: View {
     @ObservedObject private var viewModel = ViewModel()
-
     @FocusState private var endEditing: Bool
-
-    let playAction: () -> Void
-
+    
     var body: some View {
         ZStack {
             StarsAnimationView()
-
+            
             VStack {
                 TextField("", text: $viewModel.activeText, axis: .vertical)
                     .font(.starWarsFont(size: 22))
@@ -28,6 +25,7 @@ struct UtteranceConfigurationView: View {
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             Spacer()
+
                             Button("Done") {
                                 endEditing = false
                             }
@@ -38,19 +36,19 @@ struct UtteranceConfigurationView: View {
                     .font(.title3.bold())
                     .foregroundColor(.white)
                 VoiceActingGender(selectedGender: $viewModel.activeGender)
-
+                
                 Text("Current Volume:")
                     .font(.title3.bold())
                     .foregroundColor(.white)
                 VolumeSlider(activeVolume: $viewModel.activeVolume)
-
+                
                 RateStepper(rateValue: $viewModel.activeRate)
-
+                
                 PitchStepper(pitchValue: $viewModel.activePitch)
-
+                
                 Spacer()
-
-                PlayButton(action: playAction)
+                
+                PlayButton(isPlaying: $viewModel.isPlaying, playAction: viewModel.playPause)
             }
             .padding(50)
         }
@@ -59,8 +57,6 @@ struct UtteranceConfigurationView: View {
 
 struct UtteranceConfigurationView_Previews: PreviewProvider {
     static var previews: some View {
-        UtteranceConfigurationView(playAction: {
-            
-        })
+        UtteranceConfigurationView()
     }
 }

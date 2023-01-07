@@ -33,5 +33,7 @@ struct SlideToUnlockButton_Previews: PreviewProvider {
         SlideToUnlockButtonView(action: {
 
         })
+        .previewLayout(.sizeThatFits)
+        .preferredColorScheme(.dark)
     }
 }

@@ -10,12 +10,12 @@ import CoreHaptics
 
 struct DragComponent: View {
     @Binding var isLocked: Bool
+
     let action: () -> Void
     
-    let maxWidth: CGFloat
-    
-    private let minWidth = CGFloat(50)
     @State private var width = CGFloat(50)
+    let maxWidth: CGFloat
+    private let minWidth = CGFloat(50)
     
     var body: some View {
         RoundedRectangle(cornerRadius: 15)

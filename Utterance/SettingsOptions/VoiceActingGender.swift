@@ -61,5 +61,6 @@ struct VoiceActingGender_Previews: PreviewProvider {
     static var previews: some View {
         VoiceActingGender(selectedGender: $gender)
             .previewLayout(.sizeThatFits)
+            .preferredColorScheme(.dark)
     }
 }

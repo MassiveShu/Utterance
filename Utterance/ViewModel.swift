@@ -12,60 +12,48 @@ import MediaPlayer
 
 final class ViewModel: ObservableObject {
     @Published var activeGender: VoiceActingGender.Gender = .male
-    @Published var activeVolume: Float = 0.3 {
-        didSet {
-            MPVolumeView.setVolume(activeVolume)
-        }
-    }
+    @Published var activeVolume: Float = 0.3
     @Published var isPlaying = false
     @Published var activeText: String = "The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space..."
-    @Published var activeRate: Float = 1
+    @Published var activeRate: Float = 0.5
     @Published var activePitch: Float = 1
 
     private lazy var synthesizer = AVSpeechSynthesizer()
     private var utterance: AVSpeechUtterance!
 
+    let male = AVSpeechSynthesisVoice(language: "en-GB")
+    let female = AVSpeechSynthesisVoice(language: "en-US")
+
+    func playPause() {
+        if isPlaying {
+            stopPronouce()
+        } else {
+            pronounce()
+        }
+    }
+
     func pronounce() {
-        synthesizer.speak(AVSpeechUtterance(utterance: activeText))
+        if activeGender == .male {
+            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: (male != nil) ? male : female))
+            isPlaying = true
+        } else {
+            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: (female != nil) ? female : male))
+            isPlaying = true
+        }
     }
 
     func stopPronouce() {
         synthesizer.stopSpeaking(at: .immediate)
-    }
-
-    func changeGender() {
-        
-    }
-
-    func changeRate() {
-
-    }
-
-    func changePitch() {
-
+        isPlaying = false
     }
 }
 
 extension AVSpeechUtterance {
-    convenience init(utterance word: String) {
+    convenience init(utterance word: String, volume: Float, rate: Float, pitch: Float, gender: AVSpeechSynthesisVoice?) {
         self.init(string: word)
-
-        rate = AVSpeechUtteranceDefaultSpeechRate
-        //        pitchMultiplier = 1
-        //        postUtteranceDelay = 0.5
-        volume = 1
-        voice = AVSpeechSynthesisVoice(language: "en-US")
-    }
-}
-
-extension MPVolumeView {
-    static func setVolume(_ volume: Float) -> Void {
-        let volumeView = MPVolumeView()
-        volumeView.showsVolumeSlider = false
-        let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
-
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
-            slider?.value = volume
-        }
+        self.volume = volume
+        self.rate = rate
+        self.pitchMultiplier = pitch
+        self.voice = gender
     }
 }

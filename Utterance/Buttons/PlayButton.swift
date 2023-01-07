@@ -9,25 +9,16 @@ import SwiftUI
 import CoreHaptics
 
 struct PlayButton: View {
-    @ObservedObject private var viewModel = ViewModel()
+    @Binding var isPlaying: Bool
 
-    @State private var isPlaying: Bool = true
-
-    var action: () -> Void
+    var playAction: () -> Void
 
     var body: some View {
         Button(action: {
-            if isPlaying == true {
-                viewModel.pronounce()
-                self.isPlaying.toggle()
-                hapticResponse()
-            } else {
-                viewModel.stopPronouce()
-                self.isPlaying.toggle()
-                hapticResponse()
-            }
+            playAction()
+            hapticResponse()
         }) {
-            Image(systemName: self.isPlaying == true ? "play.circle" : "stop.circle")
+            Image(systemName: self.isPlaying ? "stop.circle" : "play.circle")
                 .padding()
         }
         .buttonStyle(PlayButtonStyle())
@@ -42,8 +33,10 @@ struct PlayButton: View {
 
 struct PlayButton_Previews: PreviewProvider {
     static var previews: some View {
-        PlayButton(action: {
+        PlayButton(isPlaying: .constant(true), playAction: {
             
         })
+        .previewLayout(.sizeThatFits)
+        .preferredColorScheme(.dark)
     }
 }
