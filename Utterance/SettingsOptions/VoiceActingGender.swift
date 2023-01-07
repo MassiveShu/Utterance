@@ -11,7 +11,7 @@ import CoreHaptics
 struct VoiceActingGender: View {
     enum Gender: String, Identifiable, CaseIterable {
         case male = "♂︎ Male"
-        case feemale = "⚲ Female"
+        case female = "⚲ Female"
 
         var id: String {
             self.rawValue

@@ -34,10 +34,10 @@ final class ViewModel: ObservableObject {
 
     func pronounce() {
         if activeGender == .male {
-            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: (male != nil) ? male : female))
+            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: male))
             isPlaying = true
         } else {
-            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: (female != nil) ? female : male))
+            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: female))
             isPlaying = true
         }
     }
