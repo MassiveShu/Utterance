@@ -12,13 +12,16 @@ struct PlayButton: View {
     @Binding var isPlaying: Bool
 
     var playAction: () -> Void
+    
+    let playIcon = "play.circle"
+    let stopIcon = "stop.circle"
 
     var body: some View {
         Button(action: {
             playAction()
             hapticResponse()
         }) {
-            Image(systemName: self.isPlaying ? "stop.circle" : "play.circle")
+            Image(systemName: self.isPlaying ? stopIcon : playIcon)
                 .padding()
         }
         .buttonStyle(PlayButtonStyle())

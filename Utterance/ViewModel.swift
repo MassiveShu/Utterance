@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 import AVFoundation
-import MediaPlayer
 
 final class ViewModel: ObservableObject {
     @Published var activeGender: VoiceActingGender.Gender = .male
@@ -19,10 +18,9 @@ final class ViewModel: ObservableObject {
     @Published var activePitch: Float = 1
 
     private lazy var synthesizer = AVSpeechSynthesizer()
-    private var utterance: AVSpeechUtterance!
 
-    let male = AVSpeechSynthesisVoice(language: "en-GB")
-    let female = AVSpeechSynthesisVoice(language: "en-US")
+    let maleGender = AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.en-GB.Daniel")
+    let femaleGender = AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.en-US.Samantha")
 
     func playPause() {
         if isPlaying {
@@ -34,17 +32,37 @@ final class ViewModel: ObservableObject {
 
     func pronounce() {
         if activeGender == .male {
-            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: male))
-            isPlaying = true
+            maleVoice()
         } else {
-            synthesizer.speak(AVSpeechUtterance(utterance: activeText, volume: activeVolume, rate: activeRate, pitch: activePitch, gender: female))
-            isPlaying = true
+            femaleVoice()
         }
     }
 
     func stopPronouce() {
         synthesizer.stopSpeaking(at: .immediate)
         isPlaying = false
+    }
+
+    func maleVoice() {
+        synthesizer.speak(AVSpeechUtterance(
+            utterance: activeText,
+            volume: activeVolume,
+            rate: activeRate,
+            pitch: activePitch,
+            gender: maleGender)
+        )
+        isPlaying = true
+    }
+
+    func femaleVoice() {
+        synthesizer.speak(AVSpeechUtterance(
+            utterance: activeText,
+            volume: activeVolume,
+            rate: activeRate,
+            pitch: activePitch,
+            gender: femaleGender)
+        )
+        isPlaying = true
     }
 }
 

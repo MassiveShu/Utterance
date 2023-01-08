@@ -10,7 +10,7 @@ import SwiftUI
 struct PitchStepper: View {
     @Binding var pitchValue: Float
     
-    let step: Float = 0.5
+    private let step: Float = 0.5
     
     var body: some View {
         Stepper("Pitch: \(String(format: "%.1f", pitchValue))",
