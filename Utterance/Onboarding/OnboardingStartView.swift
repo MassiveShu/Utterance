@@ -12,27 +12,27 @@ struct OnboardingStartView: View {
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                StarsAnimationView()
-                VStack {
-                    Spacer()
+            VStack {
+                Spacer()
 
-                    Text("A long time ago, \nin a galaxy far, far away...")
-                        .font(.starWarsFont(size: 60))
-                        .foregroundColor(Color.yellowSW)
+                Text("A long time ago, \nin a galaxy far, far away...")
+                    .font(.starWarsFont(size: 60))
+                    .foregroundColor(Color.yellowSW)
 
-                    Spacer()
+                Spacer()
 
-                    SlideToUnlockButtonView(action: {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            isLocked = true
-                        }
-                    })
-                    .navigationDestination(isPresented: $isLocked) {
-                        UtteranceConfigurationView()
+                SlideToUnlockButtonView(action: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        isLocked = true
                     }
+                })
+                .navigationDestination(isPresented: $isLocked) {
+                    UtteranceConfigurationView()
                 }
-                .padding(50)
+            }
+            .padding(50)
+            .background {
+                StarsAnimationView()
             }
         }
     }
