@@ -19,6 +19,7 @@ struct UtteranceConfigurationView: View {
                 TextField("", text: $viewModel.activeText, axis: .vertical)
                     .font(.starWarsFont(size: 22))
                     .foregroundColor(Color.yellowSW)
+                    .multilineTextAlignment(.center)
                     .lineSpacing(3)
                     .lineLimit(6...8)
                     .focused($endEditing)
