@@ -10,48 +10,70 @@ import SwiftUI
 struct UtteranceConfigurationView: View {
     @ObservedObject private var viewModel = ViewModel()
     @FocusState private var endEditing: Bool
-    
+
     var body: some View {
         VStack {
-            TextField("", text: $viewModel.activeText, axis: .vertical)
-                .font(.starWarsFont(size: 22))
-                .foregroundColor(Color.yellowSW)
-                .multilineTextAlignment(.center)
-                .lineSpacing(3)
-                .lineLimit(6...8)
-                .focused($endEditing)
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
+            VStack(alignment: .leading) {
+                Text("Editable text:")
+                    .font(.subheadline.bold())
+                    .foregroundColor(.white)
 
-                        Button("Done") {
-                            endEditing = false
+                TextField("", text: $viewModel.activeText, axis: .vertical)
+                    .font(.starWarsFont(size: 22))
+                    .foregroundColor(Color.yellowSW)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(3)
+                    .lineLimit(6...8)
+                    .focused($endEditing)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+
+                            Button("Done") {
+                                endEditing = false
+                            }
                         }
                     }
-                }
 
-            Text("Voice acting gender:")
-                .font(.title3.bold())
-                .foregroundColor(.white)
-            VoiceActingGender(selectedGender: $viewModel.activeGender)
+                Text("Voice:")
+                    .font(.subheadline.bold())
+                    .foregroundColor(.white)
 
-            Text("Current Volume:")
-                .font(.title3.bold())
-                .foregroundColor(.white)
-            VolumeSlider(activeVolume: $viewModel.activeVolume)
+                GenderPickerView(
+                    selectedVoice: $viewModel.selectedVoice,
+                    allVoices: $viewModel.allVoices
+                )
 
-            RateStepper(rateValue: $viewModel.activeRate)
+                Text("Volume:")
 
-            PitchStepper(pitchValue: $viewModel.activePitch)
+                    .font(.subheadline.bold())
+                    .foregroundColor(.white)
+                VolumeSlider(
+                    activeVolume: $viewModel.activeVolume
+                )
 
-            Spacer()
+                RateStepper(
+                    rateValue: $viewModel.activeRate
+                )
 
-            PlayButton(isPlaying: $viewModel.isPlaying, playAction: viewModel.playPause)
+                PitchStepper(
+                    pitchValue: $viewModel.activePitch
+                )
+            }
+            .padding()
+
+            VStack {
+                PlayButton(
+                    isPlaying: $viewModel.isPlaying,
+                    playAction: viewModel.playPause
+                )
+            }
+            .padding(.bottom, 10)
         }
-        .padding(50)
         .background {
             StarsAnimationView()
         }
+        .preferredColorScheme(.dark)
     }
 }
 

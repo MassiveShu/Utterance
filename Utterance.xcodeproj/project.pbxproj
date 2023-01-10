@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E60FD434295B0A3E00F6EBC2 /* VoiceActingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */; };
 		E60FD436295B121200F6EBC2 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD435295B121200F6EBC2 /* VolumeSlider.swift */; };
 		E60FD43A295B16E900F6EBC2 /* RateStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD439295B16E900F6EBC2 /* RateStepper.swift */; };
 		E60FD43C295B284100F6EBC2 /* PitchStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD43B295B284100F6EBC2 /* PitchStepper.swift */; };
@@ -15,6 +14,7 @@
 		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
+		E6A34ADC296C8E1A00FA4D30 /* GenderPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A34ADB296C8E1A00FA4D30 /* GenderPickerView.swift */; };
 		E6C196FE29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */; };
 		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
@@ -29,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActingGender.swift; sourceTree = "<group>"; };
 		E60FD435295B121200F6EBC2 /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
 		E60FD439295B16E900F6EBC2 /* RateStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStepper.swift; sourceTree = "<group>"; };
 		E60FD43B295B284100F6EBC2 /* PitchStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchStepper.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		E61EB6F22952195D0057608E /* UtteranceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceApp.swift; sourceTree = "<group>"; };
 		E61EB6F62952195E0057608E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EB6F92952195E0057608E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6A34ADB296C8E1A00FA4D30 /* GenderPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPickerView.swift; sourceTree = "<group>"; };
 		E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SfDistantGalaxyOutline-xoeO.ttf"; sourceTree = "<group>"; };
 		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		E60FD430295AFCBD00F6EBC2 /* SettingsOptions */ = {
 			isa = PBXGroup;
 			children = (
-				E60FD433295B0A3E00F6EBC2 /* VoiceActingGender.swift */,
+				E6A34ADB296C8E1A00FA4D30 /* GenderPickerView.swift */,
 				E60FD435295B121200F6EBC2 /* VolumeSlider.swift */,
 				E60FD439295B16E900F6EBC2 /* RateStepper.swift */,
 				E60FD43B295B284100F6EBC2 /* PitchStepper.swift */,
@@ -242,11 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6D5BB7829572C5800DEE0B0 /* OnboardingStartView.swift in Sources */,
-				E60FD434295B0A3E00F6EBC2 /* VoiceActingGender.swift in Sources */,
 				E6FB90AE295A11F00070FCD2 /* UtteranceConfigurationView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6FB90B6295A19770070FCD2 /* FontExtension.swift in Sources */,
+				E6A34ADC296C8E1A00FA4D30 /* GenderPickerView.swift in Sources */,
 				E60FD43C295B284100F6EBC2 /* PitchStepper.swift in Sources */,
 				E60FD436295B121200F6EBC2 /* VolumeSlider.swift in Sources */,
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,

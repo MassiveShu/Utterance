@@ -13,7 +13,7 @@ struct RateStepper: View {
     let step: Float = 0.25
     
     var body: some View {
-        Stepper("Rate: \(String(format: "%.2f", rateValue))",
+        Stepper("Rate: \(String(format: "%.2f", rateValue))x",
                 value: $rateValue,
                 in: 0.25...2.0,
                 step: step
