@@ -1,5 +1,5 @@
 //
-//  VoicePickerView.swift
+//  VoicePicker.swift
 //  Utterance
 //
 //  Created by Max Shu on 09.01.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-struct VoicePickerView: View {
+struct VoicePicker: View {
     @Binding var selectedVoice: String
     let allVoices: [String]
 
@@ -23,12 +23,12 @@ struct VoicePickerView: View {
         .pickerStyle(.wheel)
     }
 
-    struct VoicePickerView_Previews: PreviewProvider {
+    struct VoicePicker_Previews: PreviewProvider {
         @State static var selectedVoice = "voice1"
         static let allVoices = ["voice1", "Voice2", "voice3"]
 
         static var previews: some View {
-            VoicePickerView(
+            VoicePicker(
                 selectedVoice: $selectedVoice,
                 allVoices: allVoices
             )

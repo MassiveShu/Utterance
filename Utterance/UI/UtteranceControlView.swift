@@ -40,7 +40,7 @@ struct UtteranceControlView: View {
                         .font(.subheadline.bold())
                         .foregroundColor(.white)
 
-                    VoicePickerView(
+                    VoicePicker(
                         selectedVoice: $viewModel.selectedVoice,
                         allVoices: viewModel.allVoicesName
                     )
