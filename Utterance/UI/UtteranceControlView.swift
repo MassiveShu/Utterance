@@ -63,10 +63,14 @@ struct UtteranceControlView: View {
                 }
                 .padding()
 
-                PlayButton(
-                    isPlaying: $viewModel.isPlaying,
-                    playAction: viewModel.playPause
-                )
+                VStack {
+                    PlayButton(
+                        isPlaying: $viewModel.isPlaying,
+                        playAction: viewModel.playPause
+                    )
+
+                }
+                .padding(.top, 50)
             }
             .background {
                 StarsAnimationView()

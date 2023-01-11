@@ -45,12 +45,24 @@ struct StarsAnimationView: View {
                     }
                 }
             }
+            .overlay(overlayGradient)
             .navigationBarBackButtonHidden(true)
         }
     }
     
     func randomPadding() -> CGFloat {
         CGFloat(Int.random(in: 20..<150))
+    }
+
+    private var overlayGradient: some View {
+        Rectangle().fill(
+            LinearGradient(
+                gradient: Gradient(colors: [.lightBlueStarWars, .black]),
+                startPoint: .top,
+                endPoint: .center
+            )
+            .opacity(0.5)
+        )
     }
 }
 
