@@ -16,7 +16,7 @@ struct UtteranceControlView: View {
             VStack {
                 VStack(alignment: .leading) {
                     Text("Editable text:")
-                        .font(.subheadline.bold())
+                        .font(.body.bold())
                         .foregroundColor(.white)
 
                     TextField("", text: $viewModel.activeText, axis: .vertical)
@@ -37,7 +37,7 @@ struct UtteranceControlView: View {
                         }
 
                     Text("Voice:")
-                        .font(.subheadline.bold())
+                        .font(.body.bold())
                         .foregroundColor(.white)
 
                     VoicePicker(
@@ -46,7 +46,7 @@ struct UtteranceControlView: View {
                     )
 
                     Text("Volume:")
-                        .font(.subheadline.bold())
+                        .font(.body.bold())
                         .foregroundColor(.white)
 
                     VolumeSlider(
