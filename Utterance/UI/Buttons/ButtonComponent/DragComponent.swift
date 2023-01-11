@@ -10,6 +10,7 @@ import CoreHaptics
 
 struct DragComponent: View {
     @Binding var isLocked: Bool
+    @State private var engine: CHHapticEngine?
 
     let action: () -> Void
     
@@ -40,11 +41,11 @@ struct DragComponent: View {
                     }
                     .onEnded { value in
                         guard isLocked else { return }
-                        hapticResponse()
+                        hapticsSuccess()
                         if width < maxWidth {
                             width = minWidth
                         } else {
-                            hapticResponse()
+                            hapticsSuccess()
                             action()
                             withAnimation(.spring()) {
                                 isLocked = false
@@ -52,6 +53,7 @@ struct DragComponent: View {
                         }
                     }
             )
+            .onAppear(perform: prepareHaptics)
             .animation(.easeOut, value: width)
     }
 
@@ -66,10 +68,36 @@ struct DragComponent: View {
             .scaleEffect(isShown ? 1 : 0.01)
     }
 
-    func hapticResponse() {
+    func prepareHaptics() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-        let haptic = UINotificationFeedbackGenerator()
-        haptic.notificationOccurred(.success)
+
+        do {
+            engine = try CHHapticEngine()
+            try engine?.start()
+        } catch {
+            print("Error with creating the engine: \(error.localizedDescription)")
+        }
+    }
+
+    func hapticsSuccess() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+
+        var events  = [CHHapticEvent]()
+
+        for i in stride(from: 0, through: 1, by: 0.1) {
+            let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: Float(i))
+            let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: Float(i))
+            let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: i)
+            events.append(event)
+        }
+
+        do {
+            let pattern = try CHHapticPattern(events: events, parameters: [])
+            let player = try engine?.makePlayer(with: pattern)
+            try player?.start(atTime: 0)
+        } catch {
+            print("Failed to play pattern: \(error.localizedDescription)")
+        }
     }
 }
 
