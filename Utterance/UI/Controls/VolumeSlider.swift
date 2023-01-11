@@ -30,7 +30,6 @@ struct VolumeSlider_Previews: PreviewProvider {
     static var previews: some View {
         VolumeSlider(activeVolume: $volume)
             .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.dark)
     }
 }
 

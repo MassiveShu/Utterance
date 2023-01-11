@@ -40,6 +40,5 @@ struct PlayButton_Previews: PreviewProvider {
             
         })
         .previewLayout(.sizeThatFits)
-        .preferredColorScheme(.dark)
     }
 }

@@ -32,6 +32,5 @@ struct RateStepper_Previews: PreviewProvider {
     static var previews: some View {
         RateStepper(rateValue: $rate)
             .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.dark)
     }
 }

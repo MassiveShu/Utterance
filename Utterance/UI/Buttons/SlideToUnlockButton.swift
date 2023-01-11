@@ -48,6 +48,5 @@ struct SlideToUnlockButton_Previews: PreviewProvider {
 
         })
         .previewLayout(.sizeThatFits)
-        .preferredColorScheme(.dark)
     }
 }

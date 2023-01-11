@@ -33,6 +33,5 @@ struct PitchStepper_Previews: PreviewProvider {
     static var previews: some View {
         PitchStepper(pitchValue: $pitch)
             .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.dark)
     }
 }

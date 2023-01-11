@@ -17,6 +17,7 @@ struct VoicePicker: View {
             ForEach(allVoices, id: \.self) { voice in
                 Text("\(voice)")
             }
+            .foregroundColor(.white)
         } label: {
             Text("Utterance")
         }
@@ -33,7 +34,6 @@ struct VoicePicker: View {
                 allVoices: allVoices
             )
             .previewLayout(.sizeThatFits)
-            .preferredColorScheme(.dark)
         }
     }
 }

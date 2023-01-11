@@ -46,9 +46,9 @@ struct UtteranceControlView: View {
                     )
 
                     Text("Volume:")
-
                         .font(.subheadline.bold())
                         .foregroundColor(.white)
+
                     VolumeSlider(
                         activeVolume: $viewModel.activeVolume
                     )
@@ -71,7 +71,6 @@ struct UtteranceControlView: View {
             .background {
                 StarsAnimationView()
             }
-            .preferredColorScheme(.dark)
         }
     }
 }
