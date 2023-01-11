@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UtteranceConfigurationView: View {
-    @ObservedObject private var viewModel = ViewModel()
+    @ObservedObject private var viewModel = UtteranceViewModel()
     @FocusState private var endEditing: Bool
 
     var body: some View {
@@ -39,9 +39,9 @@ struct UtteranceConfigurationView: View {
                     .font(.subheadline.bold())
                     .foregroundColor(.white)
 
-                GenderPickerView(
+                VoicePickerView(
                     selectedVoice: $viewModel.selectedVoice,
-                    allVoices: $viewModel.allVoices
+                    allVoices: viewModel.allVoicesName
                 )
 
                 Text("Volume:")

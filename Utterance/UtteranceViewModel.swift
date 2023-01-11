@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  UtteranceViewModel.swift
 //  Utterance
 //
 //  Created by Max Shu on 27.12.2022.
@@ -9,21 +9,31 @@ import Foundation
 import SwiftUI
 import AVFoundation
 
-final class ViewModel: ObservableObject {
+final class UtteranceViewModel: ObservableObject {
     @Published var activeVolume: Float = 0.3
     @Published var activeText: String = "The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space..."
     @Published var activeRate: Float = 0.5
     @Published var activePitch: Float = 1
-    @Published var selectedVoice = 23
+    @Published var selectedVoice: String = ""
     @Published var isPlaying = false
 
     private lazy var synthesizer = AVSpeechSynthesizer()
 
-    var allVoices: [AVSpeechSynthesisVoice] = {
-        AVSpeechSynthesisVoice.speechVoices().filter { voice in
-            voice.language.starts(with: "en")
-        }
-    }()
+    let allVoices: [AVSpeechSynthesisVoice]
+
+    let allVoicesName: [String]
+
+    init() {
+        self.allVoices = {
+            AVSpeechSynthesisVoice.speechVoices().filter { voice in
+                voice.language.starts(with: "en")
+            }
+        }()
+
+        self.allVoicesName = allVoices.map(\.name)
+
+        selectedVoice = allVoicesName.first ?? ""
+    }
 
     func playPause() {
         if isPlaying {
@@ -39,7 +49,9 @@ final class ViewModel: ObservableObject {
             volume: activeVolume,
             rate: activeRate,
             pitch: activePitch,
-            voice: self.allVoices[self.selectedVoice]
+            voice: allVoices.first(where: { voice in
+                voice.name == selectedVoice
+            })
         )
         )
         isPlaying = true

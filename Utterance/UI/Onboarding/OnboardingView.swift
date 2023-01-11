@@ -1,5 +1,5 @@
 //
-//  OnboardingStartView.swift
+//  OnboardingView.swift
 //  Utterance
 //
 //  Created by Max Shu on 24.12.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingStartView: View {
+struct OnboardingView: View {
     @State private var isLocked = false
 
     var body: some View {
@@ -38,8 +38,8 @@ struct OnboardingStartView: View {
     }
 }
 
-struct OnboardingStartView_Previews: PreviewProvider {
+struct OnboardingtView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingStartView()
+        OnboardingView()
     }
 }
