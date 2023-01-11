@@ -128,18 +128,18 @@
 			children = (
 				E6C6319A2955F0D5000AAB26 /* PlayButton.swift */,
 				E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButton.swift */,
-				E6D5BB682957134800DEE0B0 /* ButtonComponents */,
+				E6D5BB682957134800DEE0B0 /* ButtonComponent */,
 				E6D5BB762957259C00DEE0B0 /* ButtonStyle */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		E6D5BB682957134800DEE0B0 /* ButtonComponents */ = {
+		E6D5BB682957134800DEE0B0 /* ButtonComponent */ = {
 			isa = PBXGroup;
 			children = (
 				E6D5BB692957134800DEE0B0 /* DragComponent.swift */,
 			);
-			path = ButtonComponents;
+			path = ButtonComponent;
 			sourceTree = "<group>";
 		};
 		E6D5BB752957255200DEE0B0 /* Onboarding */ = {
