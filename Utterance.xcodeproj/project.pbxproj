@@ -20,7 +20,7 @@
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
 		E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB692957134800DEE0B0 /* DragComponent.swift */; };
 		E6D5BB712957134800DEE0B0 /* Color+StarWars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* Color+StarWars.swift */; };
-		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
+		E6D5BB722957134800DEE0B0 /* SlideToUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButton.swift */; };
 		E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */; };
 		E6D5BB7829572C5800DEE0B0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB7729572C5800DEE0B0 /* OnboardingView.swift */; };
 		E6FB90AE295A11F00070FCD2 /* UtteranceControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90AD295A11F00070FCD2 /* UtteranceControlView.swift */; };
@@ -42,7 +42,7 @@
 		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
 		E6D5BB692957134800DEE0B0 /* DragComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragComponent.swift; sourceTree = "<group>"; };
 		E6D5BB6C2957134800DEE0B0 /* Color+StarWars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+StarWars.swift"; sourceTree = "<group>"; };
-		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButtonView.swift; sourceTree = "<group>"; };
+		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButton.swift; sourceTree = "<group>"; };
 		E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsAnimationView.swift; sourceTree = "<group>"; };
 		E6D5BB7729572C5800DEE0B0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E6D5BB7C295755A900DEE0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C6319A2955F0D5000AAB26 /* PlayButton.swift */,
-				E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */,
+				E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButton.swift */,
 				E6D5BB682957134800DEE0B0 /* ButtonComponents */,
 				E6D5BB762957259C00DEE0B0 /* ButtonStyle */,
 			);
@@ -253,7 +253,7 @@
 				E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */,
 				E60FD43A295B16E900F6EBC2 /* RateStepper.swift in Sources */,
 				E60FD43F295B36B900F6EBC2 /* UtteranceViewModel.swift in Sources */,
-				E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */,
+				E6D5BB722957134800DEE0B0 /* SlideToUnlockButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

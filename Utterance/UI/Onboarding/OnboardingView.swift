@@ -21,7 +21,7 @@ struct OnboardingView: View {
 
                 Spacer()
 
-                SlideToUnlockButtonView(action: {
+                SlideToUnlockButton(action: {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         isLocked = true
                     }

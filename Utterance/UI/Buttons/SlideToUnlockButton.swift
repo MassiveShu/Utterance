@@ -1,5 +1,5 @@
 //
-//  SlideToUnlockButtonView.swift
+//  SlideToUnlockButton.swift
 //  Utterance
 //
 //  Created by Max Shu on 20.12.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SlideToUnlockButtonView: View {
+struct SlideToUnlockButton: View {
     @State private var isLocked = true
     let action: () -> Void
 
@@ -44,7 +44,7 @@ struct SlideToUnlockButtonView: View {
 
 struct SlideToUnlockButton_Previews: PreviewProvider {
     static var previews: some View {
-        SlideToUnlockButtonView(action: {
+        SlideToUnlockButton(action: {
 
         })
         .previewLayout(.sizeThatFits)
