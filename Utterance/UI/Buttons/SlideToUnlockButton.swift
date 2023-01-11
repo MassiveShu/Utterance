@@ -11,8 +11,9 @@ struct SlideToUnlockButton: View {
     @State private var isLocked = true
     @State private var didSlide = false
 
-    let animation = Animation.easeOut(duration: 1.7).delay(0.2).repeatForever(autoreverses: true)
-    let gradient = Gradient(colors: [.black, .yellowStarWars, .yellowStarWars, .yellowStarWars, .black, .black, .black, .black, .black, .black, .black, .black])
+    let animation = Animation.easeOut(duration: 1.5).delay(0.2).repeatForever(autoreverses: true)
+    let gradient = Gradient(colors: [.black, .yellowStarWars, .yellowStarWars, .black])
+    
     let action: () -> Void
     
     var body: some View {
@@ -39,7 +40,7 @@ struct SlideToUnlockButton: View {
             
             LinearGradient(
                 gradient: gradient,
-                startPoint: didSlide ? .trailing: .leading,
+                startPoint: didSlide ? .trailing : .leading,
                 endPoint: .leading
             )
             .mask(Text("Continue..."))
