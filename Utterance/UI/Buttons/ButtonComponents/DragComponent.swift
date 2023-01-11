@@ -19,7 +19,7 @@ struct DragComponent: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
-            .fill(Color.yellowSW)
+            .fill(Color.yellowStarWars)
             .opacity(width / maxWidth)
             .frame(width: width)
             .overlay(

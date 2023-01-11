@@ -31,7 +31,7 @@ struct SlideToUnlockButtonView: View {
     private var background: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
-                .fill(Color.lightBlueSW)
+                .fill(Color.lightBlueStarWars)
 
             Text("Let's go")
                 .font(.title2)

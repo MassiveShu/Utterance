@@ -8,6 +8,6 @@
 import SwiftUI
 
 extension Color {
-    static let yellowSW: Color = Color("yellowSWColor")
-    static let lightBlueSW: Color = Color("lightBlueSWColor")
+    static let yellowStarWars: Color = Color("yellowStarWarsColor")
+    static let lightBlueStarWars: Color = Color("lightBlueStarWarsColor")
 }

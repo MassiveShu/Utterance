@@ -12,7 +12,7 @@ struct PlayButtonStyle: ButtonStyle {
         configuration.label
             .font(.largeTitle.bold())
             .frame(minWidth: 130)
-            .background(configuration.isPressed ? Color.yellowSW : .lightBlueSW)
+            .background(configuration.isPressed ? Color.yellowStarWars : .lightBlueStarWars)
             .foregroundColor(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 25))
             .scaleEffect(configuration.isPressed ? 0.95 : 1)

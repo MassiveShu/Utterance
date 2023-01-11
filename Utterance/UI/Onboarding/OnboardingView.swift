@@ -17,7 +17,7 @@ struct OnboardingView: View {
 
                 Text("A long time ago, \nin a galaxy far, far away...")
                     .font(.starWarsFont(size: 60))
-                    .foregroundColor(Color.yellowSW)
+                    .foregroundColor(Color.yellowStarWars)
 
                 Spacer()
 
