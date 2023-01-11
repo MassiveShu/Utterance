@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreHaptics
 import MediaPlayer
 
 struct VolumeSlider: View {
