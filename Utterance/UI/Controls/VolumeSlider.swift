@@ -32,5 +32,3 @@ struct VolumeSlider_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
-
-

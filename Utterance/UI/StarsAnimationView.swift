@@ -14,9 +14,11 @@ struct StarsAnimationView: View {
     }
     
     @State private var runAnimation = false
+
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
+
             VStack {
                 ForEach(Constant.linesOfStars, id: \.self) { _ in
                     HStack {

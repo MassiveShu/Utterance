@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SlideToUnlockButton: View {
     @State private var isLocked = true
+    
     let action: () -> Void
 
     var body: some View {

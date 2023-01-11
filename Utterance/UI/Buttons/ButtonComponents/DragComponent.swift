@@ -84,4 +84,3 @@ struct DragComponent_Previews: PreviewProvider {
         )
     }
 }
-

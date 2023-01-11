@@ -34,6 +34,7 @@ struct VoicePicker: View {
                 allVoices: allVoices
             )
             .previewLayout(.sizeThatFits)
+            .preferredColorScheme(.dark)
         }
     }
 }
