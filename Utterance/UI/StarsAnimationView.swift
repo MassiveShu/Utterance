@@ -15,42 +15,39 @@ struct StarsAnimationView: View {
     
     @State private var runAnimation = false
     var body: some View {
-        ScrollView {
-            ZStack {
-                // create a black background with no edges ignoredSafeArea
-                Color.black.edgesIgnoringSafeArea(.all)
-                VStack {
-                    ForEach(Constant.linesOfStars, id: \.self) { _ in
-                        HStack {
-                            ForEach(Constant.numberOfStars, id: \.self) { _ in
-                                Circle()
-                                    .fill(Color.white)
-                                    // size of stars
-                                    .frame(width: 3, height: 2)
-                                    .blur(radius: runAnimation ? 1 : 0)
-                                    .padding(
-                                        EdgeInsets(
-                                            top: self.randomPadding(),
-                                            leading: 0,
-                                            bottom: 0,
-                                            trailing: self.randomPadding()
-                                        )
+        ZStack {
+            // create a black background with no edges ignoredSafeArea
+            Color.black.edgesIgnoringSafeArea(.all)
+            VStack {
+                ForEach(Constant.linesOfStars, id: \.self) { _ in
+                    HStack {
+                        ForEach(Constant.numberOfStars, id: \.self) { _ in
+                            Circle()
+                                .fill(Color.white)
+                                // size of stars
+                                .frame(width: 3, height: 2)
+                                .blur(radius: runAnimation ? 1 : 0)
+                                .padding(
+                                    EdgeInsets(
+                                        top: self.randomPadding(),
+                                        leading: 0,
+                                        bottom: 0,
+                                        trailing: self.randomPadding()
                                     )
-                                    .onAppear() {
-                                        let animation = Animation.easeOut(duration: 13).repeatForever()
-                                        // stars animation
-                                        withAnimation(animation) {
-                                            self.runAnimation = true
-                                        }
+                                )
+                                .onAppear() {
+                                    let animation = Animation.easeOut(duration: 13).repeatForever()
+                                    // stars animation
+                                    withAnimation(animation) {
+                                        self.runAnimation = true
                                     }
-                            }
+                                }
                         }
                     }
                 }
-                .navigationBarBackButtonHidden(true)
             }
+            .navigationBarBackButtonHidden(true)
         }
-        .ignoresSafeArea()
     }
     
     func randomPadding() -> CGFloat {

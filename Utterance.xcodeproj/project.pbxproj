@@ -23,7 +23,7 @@
 		E6D5BB722957134800DEE0B0 /* SlideToUnlockButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButtonView.swift */; };
 		E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */; };
 		E6D5BB7829572C5800DEE0B0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB7729572C5800DEE0B0 /* OnboardingView.swift */; };
-		E6FB90AE295A11F00070FCD2 /* UtteranceConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90AD295A11F00070FCD2 /* UtteranceConfigurationView.swift */; };
+		E6FB90AE295A11F00070FCD2 /* UtteranceControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90AD295A11F00070FCD2 /* UtteranceControlView.swift */; };
 		E6FB90B6295A19770070FCD2 /* Font+StarWars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB90B5295A19770070FCD2 /* Font+StarWars.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsAnimationView.swift; sourceTree = "<group>"; };
 		E6D5BB7729572C5800DEE0B0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E6D5BB7C295755A900DEE0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6FB90AD295A11F00070FCD2 /* UtteranceConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceConfigurationView.swift; sourceTree = "<group>"; };
+		E6FB90AD295A11F00070FCD2 /* UtteranceControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceControlView.swift; sourceTree = "<group>"; };
 		E6FB90B5295A19770070FCD2 /* Font+StarWars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+StarWars.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +94,6 @@
 				E61EB6F22952195D0057608E /* UtteranceApp.swift */,
 				E60FD43E295B36B900F6EBC2 /* UtteranceViewModel.swift */,
 				E6811BCF296EC93D00A45261 /* UI */,
-				E6D5BB792957545500DEE0B0 /* Font */,
 				E61EB6F62952195E0057608E /* Assets.xcassets */,
 				E6D5BB7C295755A900DEE0B0 /* Info.plist */,
 				E61EB6F82952195E0057608E /* Preview Content */,
@@ -115,9 +114,10 @@
 			children = (
 				E6D5BB6C2957134800DEE0B0 /* Color+StarWars.swift */,
 				E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */,
-				E6FB90AD295A11F00070FCD2 /* UtteranceConfigurationView.swift */,
+				E6FB90AD295A11F00070FCD2 /* UtteranceControlView.swift */,
 				E6D5BB672957134800DEE0B0 /* Buttons */,
 				E60FD430295AFCBD00F6EBC2 /* Controls */,
+				E6D5BB792957545500DEE0B0 /* Font */,
 				E6D5BB752957255200DEE0B0 /* Onboarding */,
 			);
 			path = UI;
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6D5BB7829572C5800DEE0B0 /* OnboardingView.swift in Sources */,
-				E6FB90AE295A11F00070FCD2 /* UtteranceConfigurationView.swift in Sources */,
+				E6FB90AE295A11F00070FCD2 /* UtteranceControlView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6FB90B6295A19770070FCD2 /* Font+StarWars.swift in Sources */,

@@ -27,7 +27,7 @@ struct OnboardingView: View {
                     }
                 })
                 .navigationDestination(isPresented: $isLocked) {
-                    UtteranceConfigurationView()
+                    UtteranceControlView()
                 }
             }
             .padding(50)
