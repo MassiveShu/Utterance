@@ -13,13 +13,14 @@ struct OnboardingView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Spacer()
-
-                Text("A long time ago, \nin a galaxy far, far away...")
-                    .font(.starWarsFont(size: 60))
-                    .foregroundColor(Color.yellowStarWars)
-
-                Spacer()
+                ScrollView {
+                    VStack {
+                        Text("A long time ago, \nin a galaxy far, far away...")
+                            .font(.starWarsFont(size: 60))
+                            .foregroundColor(Color.yellowStarWars)
+                    }
+                    .padding(.top, 70)
+                }
 
                 SlideToUnlockButton(action: {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
