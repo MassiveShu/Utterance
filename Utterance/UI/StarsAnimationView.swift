@@ -16,7 +16,6 @@ struct StarsAnimationView: View {
     @State private var runAnimation = false
     var body: some View {
         ZStack {
-            // create a black background with no edges ignoredSafeArea
             Color.black.edgesIgnoringSafeArea(.all)
             VStack {
                 ForEach(Constant.linesOfStars, id: \.self) { _ in
@@ -24,7 +23,6 @@ struct StarsAnimationView: View {
                         ForEach(Constant.numberOfStars, id: \.self) { _ in
                             Circle()
                                 .fill(Color.white)
-                                // size of stars
                                 .frame(width: 3, height: 2)
                                 .blur(radius: runAnimation ? 1 : 0)
                                 .padding(
@@ -37,7 +35,6 @@ struct StarsAnimationView: View {
                                 )
                                 .onAppear() {
                                     let animation = Animation.easeOut(duration: 13).repeatForever()
-                                    // stars animation
                                     withAnimation(animation) {
                                         self.runAnimation = true
                                     }
