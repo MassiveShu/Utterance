@@ -10,18 +10,19 @@ import SwiftUI
 struct UtteranceControlView: View {
     @ObservedObject private var viewModel = UtteranceViewModel()
     @FocusState private var endEditing: Bool
-
+    
     var body: some View {
         ScrollView {
             VStack {
                 VStack(alignment: .leading) {
                     Text("Editable text:")
                         .font(.body.bold())
-                        .foregroundColor(.white)
-
+                        .foregroundColor(.whiteBlack)
+                    
                     TextField("", text: $viewModel.activeText, axis: .vertical)
                         .font(.starWarsFont(size: 22))
-                        .foregroundColor(Color.yellowStarWars)
+                        .foregroundColor(Color.yellowCustom)
+                        .textFieldStyle(OvalTextFieldStyle())
                         .multilineTextAlignment(.center)
                         .lineSpacing(3)
                         .lineLimit(6...8)
@@ -29,48 +30,45 @@ struct UtteranceControlView: View {
                         .toolbar {
                             ToolbarItemGroup(placement: .keyboard) {
                                 Spacer()
-
+                                
                                 Button("Done") {
                                     endEditing = false
                                 }
                             }
                         }
-
+                    
                     Text("Voice:")
                         .font(.body.bold())
-                        .foregroundColor(.white)
-
+                        .foregroundColor(.whiteBlack)
+                    
                     VoicePicker(
                         selectedVoice: $viewModel.selectedVoice,
                         allVoices: viewModel.allVoicesName
                     )
-
+                    
                     Text("Volume:")
                         .font(.body.bold())
-                        .foregroundColor(.white)
-
+                        .foregroundColor(.whiteBlack)
+                    
                     VolumeSlider(
                         activeVolume: $viewModel.activeVolume
                     )
-
+                    
                     RateStepper(
                         rateValue: $viewModel.activeRate
                     )
-
+                    
                     PitchStepper(
                         pitchValue: $viewModel.activePitch
                     )
                 }
                 .padding()
-
-                VStack {
-                    PlayButton(
-                        isPlaying: $viewModel.isPlaying,
-                        playAction: viewModel.playPause
-                    )
-
-                }
-                .padding(.top, 50)
+                
+                PlayButton(
+                    isPlaying: $viewModel.isPlaying,
+                    playAction: viewModel.playPause
+                )
+                
             }
             .background {
                 StarsAnimationView()

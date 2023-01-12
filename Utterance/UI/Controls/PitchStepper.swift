@@ -21,7 +21,7 @@ struct PitchStepper: View {
         .padding(10)
         .font(.title3.bold())
         .foregroundColor(.black)
-        .background(Color.yellowStarWars)
+        .background(Color.yellowCustom)
         .clipShape(Capsule())
     }
 }

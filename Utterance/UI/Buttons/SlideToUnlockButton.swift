@@ -12,7 +12,7 @@ struct SlideToUnlockButton: View {
     @State private var didSlide = false
 
     let animation = Animation.easeOut(duration: 1.5).delay(0.2).repeatForever(autoreverses: true)
-    let gradient = Gradient(colors: [.black, .yellowStarWars, .yellowStarWars, .black])
+    let gradient = Gradient(colors: [.white, .yellowCustom, .yellowCustom, .white])
     
     let action: () -> Void
     
@@ -36,7 +36,7 @@ struct SlideToUnlockButton: View {
     private var background: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
-                .fill(Color.lightBlueStarWars)
+                .fill(Color.lightBlue)
             
             LinearGradient(
                 gradient: gradient,

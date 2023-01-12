@@ -16,25 +16,25 @@ final class UtteranceViewModel: ObservableObject {
     @Published var activePitch: Float = 1
     @Published var selectedVoice: String = ""
     @Published var isPlaying = false
-
+    
     private lazy var synthesizer = AVSpeechSynthesizer()
-
+    
     let allVoices: [AVSpeechSynthesisVoice]
-
+    
     let allVoicesName: [String]
-
+    
     init() {
         self.allVoices = {
             AVSpeechSynthesisVoice.speechVoices().filter { voice in
                 voice.language.starts(with: "en")
             }
         }()
-
+        
         self.allVoicesName = allVoices.map(\.name)
-
+        
         selectedVoice = allVoicesName.first ?? ""
     }
-
+    
     func playPause() {
         if isPlaying {
             stopPronouce()
@@ -42,7 +42,7 @@ final class UtteranceViewModel: ObservableObject {
             pronounce()
         }
     }
-
+    
     func pronounce() {
         synthesizer.speak(AVSpeechUtterance(
             utterance: activeText,
@@ -56,7 +56,7 @@ final class UtteranceViewModel: ObservableObject {
         )
         isPlaying = true
     }
-
+    
     func stopPronouce() {
         synthesizer.stopSpeaking(at: .immediate)
         isPlaying = false
