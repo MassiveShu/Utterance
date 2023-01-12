@@ -8,23 +8,20 @@
 import SwiftUI
 
 struct PitchStepper: View {
-//    @State private var pitchValue = 1.0
     @Binding var pitchValue: Float
-
-    let step: Float = 0.5
-
+    
+    private let step: Float = 0.5
+    
     var body: some View {
-        VStack {
-            Stepper("Pitch: \(String(format: "%.1f", pitchValue))",
-                    value: $pitchValue,
-                    in: 0.5...2.0,
-                    step: step
-            )
-        }
+        Stepper("Pitch: \(String(format: "%.1f", pitchValue))",
+                value: $pitchValue,
+                in: 0.5...2.0,
+                step: step
+        )
         .padding(10)
         .font(.title3.bold())
         .foregroundColor(.black)
-        .background(Color.yellowSW)
+        .background(Color.yellowStarWars)
         .clipShape(Capsule())
     }
 }
@@ -32,7 +29,7 @@ struct PitchStepper: View {
 
 struct PitchStepper_Previews: PreviewProvider {
     @State static var pitch: Float = 1
-
+    
     static var previews: some View {
         PitchStepper(pitchValue: $pitch)
             .previewLayout(.sizeThatFits)

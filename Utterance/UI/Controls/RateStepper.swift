@@ -9,21 +9,19 @@ import SwiftUI
 
 struct RateStepper: View {
     @Binding var rateValue: Float
-
+    
     let step: Float = 0.25
-
+    
     var body: some View {
-        VStack {
-            Stepper("Rate: \(String(format: "%.2f", rateValue))",
-                    value: $rateValue,
-                    in: 0.25...2.0,
-                    step: step
-            )
-        }
+        Stepper("Rate: \(String(format: "%.2f", rateValue))x",
+                value: $rateValue,
+                in: 0.25...2.0,
+                step: step
+        )
         .padding(10)
         .font(.title3.bold())
         .foregroundColor(.black)
-        .background(Color.yellowSW)
+        .background(Color.yellowStarWars)
         .clipShape(Capsule())
     }
 }
