@@ -7,7 +7,7 @@
 * [Twitter](https://twitter.com/MaxSh69264556)
 * [Stack Overflow](https://stackoverflow.com/users/19256991/max-sh)
 
-* # I made a Text To-Speech App SwiftUI
+# I made a Text To-Speech App SwiftUI
 
 ## Please, take a look: 
 
@@ -16,8 +16,6 @@
 * Check Video (Mute turn off) :
 
 https://user-images.githubusercontent.com/108011846/212110318-dff76c3b-e9a5-499e-b33d-be756ec2b861.MP4
-
-
 
 ## Scenario
 My app utilise a text to speech synthesizer
@@ -34,18 +32,18 @@ Speech is configured using the parameters of the AVSpeechUtterance class:
 - PitchMultiplier - voice pitch from 0.5 to 2.0, default 1.0 on statrup
 
 ## User Interfaces (UI)
-## Black Starry Sky Animated: 
+## Starry Sky Animated: 
 
 ![ezgif-4-2268c9b406](https://user-images.githubusercontent.com/108011846/212106855-07ec3286-072a-4924-8395-ce441879f67b.gif)
-
+![ezgif-4-f821c4f9f8](https://user-images.githubusercontent.com/108011846/212135483-5f6fe5df-2ec7-4879-92f1-d303bde5ea38.gif)
 
 ## Animated SlideToUnlock Button background: 
 
-![ezgif-4-2052b03d9f](https://user-images.githubusercontent.com/108011846/212104175-340e1d76-f142-4163-8bd6-34475c707f3e.gif)
+![ezgif-4-efb6a20c22](https://user-images.githubusercontent.com/108011846/212135917-aff765b7-48df-49e4-9b02-344cd91eada2.gif)
 
 ## Unlock Button DragComponent Animated: 
 
-![ezgif-4-b1b0884823](https://user-images.githubusercontent.com/108011846/212105086-8c5848b6-f15a-4550-8ad8-087a813bdd0b.gif)
+![ezgif-4-03bbd07344](https://user-images.githubusercontent.com/108011846/212136170-f4b4aae3-fbd8-41fb-b1a9-f08d7abd02e3.gif)
 
 ## Play/Stop Button Animated: 
 
