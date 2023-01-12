@@ -4,9 +4,9 @@ Hi there! I'm Maksym Shuliak ✌️
 I am a novice iOS developer.
 I have experience with SwiftUI, UIKit. I open to work and to collaborate.
 
-* ## I made a Text To-Speech App SwiftUI
+* # I made a Text To-Speech App SwiftUI
 
-# Please, take a look: 
+## Please, take a look: 
 
 - 
 
