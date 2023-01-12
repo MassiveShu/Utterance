@@ -14,8 +14,9 @@
 		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
+		E66EDD7E2970692600656E4A /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E66EDD7D2970692600656E4A /* Starjedi.ttf */; };
+		E66EDD802970703900656E4A /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EDD7F2970703900656E4A /* TextFieldStyle.swift */; };
 		E6A34ADC296C8E1A00FA4D30 /* VoicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A34ADB296C8E1A00FA4D30 /* VoicePicker.swift */; };
-		E6C196FE29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */; };
 		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
 		E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB692957134800DEE0B0 /* DragComponent.swift */; };
@@ -36,8 +37,9 @@
 		E61EB6F22952195D0057608E /* UtteranceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceApp.swift; sourceTree = "<group>"; };
 		E61EB6F62952195E0057608E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EB6F92952195E0057608E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E66EDD7D2970692600656E4A /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		E66EDD7F2970703900656E4A /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		E6A34ADB296C8E1A00FA4D30 /* VoicePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePicker.swift; sourceTree = "<group>"; };
-		E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SfDistantGalaxyOutline-xoeO.ttf"; sourceTree = "<group>"; };
 		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
 		E6D5BB692957134800DEE0B0 /* DragComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragComponent.swift; sourceTree = "<group>"; };
@@ -129,7 +131,7 @@
 				E6C6319A2955F0D5000AAB26 /* PlayButton.swift */,
 				E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButton.swift */,
 				E6D5BB682957134800DEE0B0 /* ButtonComponent */,
-				E6D5BB762957259C00DEE0B0 /* ButtonStyle */,
+				E6D5BB762957259C00DEE0B0 /* Styles */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -150,18 +152,19 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		E6D5BB762957259C00DEE0B0 /* ButtonStyle */ = {
+		E6D5BB762957259C00DEE0B0 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
 				E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */,
+				E66EDD7F2970703900656E4A /* TextFieldStyle.swift */,
 			);
-			path = ButtonStyle;
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		E6D5BB792957545500DEE0B0 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				E6C196FD29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf */,
+				E66EDD7D2970692600656E4A /* Starjedi.ttf */,
 				E6FB90B5295A19770070FCD2 /* Font+StarWars.swift */,
 			);
 			path = Font;
@@ -226,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */,
-				E6C196FE29575AE000C85C69 /* SfDistantGalaxyOutline-xoeO.ttf in Resources */,
+				E66EDD7E2970692600656E4A /* Starjedi.ttf in Resources */,
 				E61EB6F72952195E0057608E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6D5BB7829572C5800DEE0B0 /* OnboardingView.swift in Sources */,
+				E66EDD802970703900656E4A /* TextFieldStyle.swift in Sources */,
 				E6FB90AE295A11F00070FCD2 /* UtteranceControlView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,

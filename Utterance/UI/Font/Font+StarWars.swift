@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension Font {
-    private static let starWarsFontName = "SfDistantGalaxyOutline"
-
+    private static let starWarsFontName = "Starjedi"
+    
     static func starWarsFont(size: CGFloat) -> Font {
         return .custom(starWarsFontName, size: size)
     }
