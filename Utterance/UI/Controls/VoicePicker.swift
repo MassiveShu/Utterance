@@ -17,7 +17,7 @@ struct VoicePicker: View {
             ForEach(allVoices, id: \.self) { voice in
                 Text("\(voice)")
             }
-            .foregroundColor(.whiteBlack)
+            .foregroundColor(.blackWhite)
         } label: {
             Text("Utterance")
         }

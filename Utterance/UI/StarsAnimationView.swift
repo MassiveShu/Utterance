@@ -17,14 +17,14 @@ struct StarsAnimationView: View {
     
     var body: some View {
         ZStack {
-            Color.blackWhite.edgesIgnoringSafeArea(.all)
+            Color.whiteBlack.edgesIgnoringSafeArea(.all)
             
             VStack {
                 ForEach(Constant.linesOfStars, id: \.self) { _ in
                     HStack {
                         ForEach(Constant.numberOfStars, id: \.self) { _ in
                             Circle()
-                                .fill(Color.whiteBlack)
+                                .fill(Color.blackWhite)
                                 .frame(width: 3, height: 2)
                                 .blur(radius: runAnimation ? 1 : 0)
                                 .padding(
@@ -57,7 +57,7 @@ struct StarsAnimationView: View {
     private var overlayGradient: some View {
         Rectangle().fill(
             LinearGradient(
-                gradient: Gradient(colors: [.lightBlue, .blackWhite]),
+                gradient: Gradient(colors: [.lightBlue, .whiteBlack]),
                 startPoint: .top,
                 endPoint: .center
             )

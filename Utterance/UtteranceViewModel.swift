@@ -11,7 +11,7 @@ import AVFoundation
 
 final class UtteranceViewModel: ObservableObject {
     @Published var activeVolume: Float = 0.3
-    @Published var activeText: String = "The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space..."
+    @Published var activeText: String = "The evil lord Darth vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space..."
     @Published var activeRate: Float = 0.5
     @Published var activePitch: Float = 1
     @Published var selectedVoice: String = ""
