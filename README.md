@@ -34,7 +34,7 @@ Speech is configured using the parameters of the AVSpeechUtterance class:
 ## User Interfaces (UI)
 ## Light/Dark Mode Appearance:
 
-![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-13 at 13 51 55](https://user-images.githubusercontent.com/108011846/212314362-da80e90e-d0b5-4146-ad08-110f2b04e6d0.gif)
+![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-13 at 16 38 16](https://user-images.githubusercontent.com/108011846/212346075-fd976b77-5834-49ef-8534-1494e352e7a0.gif)
 
 ## Starry Sky Animated: 
 
