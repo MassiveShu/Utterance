@@ -8,9 +8,9 @@
 import SwiftUI
 
 extension Font {
-    private static let starWarsFontName = "Starjedi"
-    
-    static func starWarsFont(size: CGFloat) -> Font {
-        return .custom(starWarsFontName, size: size)
+    private static let starWarsMainFont = "SoloistStraight"
+
+    static func starWarsMainFont(size: CGFloat) -> Font {
+        .custom(starWarsMainFont, size: size)
     }
 }

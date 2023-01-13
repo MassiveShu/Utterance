@@ -17,10 +17,10 @@ struct UtteranceControlView: View {
                 VStack(alignment: .leading) {
                     Text("Editable text:")
                         .font(.body.bold())
-                        .foregroundColor(.whiteBlack)
+                        .foregroundColor(.blackWhite)
                     
                     TextField("", text: $viewModel.activeText, axis: .vertical)
-                        .font(.starWarsFont(size: 22))
+                        .font(.starWarsMainFont(size: 22))
                         .foregroundColor(Color.yellowCustom)
                         .textFieldStyle(OvalTextFieldStyle())
                         .multilineTextAlignment(.center)
@@ -39,7 +39,7 @@ struct UtteranceControlView: View {
                     
                     Text("Voice:")
                         .font(.body.bold())
-                        .foregroundColor(.whiteBlack)
+                        .foregroundColor(.blackWhite)
                     
                     VoicePicker(
                         selectedVoice: $viewModel.selectedVoice,
@@ -48,7 +48,7 @@ struct UtteranceControlView: View {
                     
                     Text("Volume:")
                         .font(.body.bold())
-                        .foregroundColor(.whiteBlack)
+                        .foregroundColor(.blackWhite)
                     
                     VolumeSlider(
                         activeVolume: $viewModel.activeVolume

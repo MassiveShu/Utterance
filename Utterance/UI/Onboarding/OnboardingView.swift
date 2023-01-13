@@ -16,7 +16,7 @@ struct OnboardingView: View {
                 ScrollView {
                     VStack {
                         Text("A long time ago, in a galaxy far, far away...")
-                            .font(.starWarsFont(size: 50))
+                            .font(.starWarsMainFont(size: 45))
                             .foregroundColor(Color.yellowBlue)
                     }
                     .padding(.top, 70)
