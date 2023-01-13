@@ -21,8 +21,7 @@ struct UtteranceControlView: View {
                     
                     TextField("", text: $viewModel.activeText, axis: .vertical)
                         .font(.starWarsMainFont(size: 22))
-                        .foregroundColor(Color.yellowCustom)
-                        .textFieldStyle(OvalTextFieldStyle())
+                        .foregroundColor(Color.yellowBlue)
                         .multilineTextAlignment(.center)
                         .lineSpacing(3)
                         .lineLimit(6...8)

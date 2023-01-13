@@ -15,7 +15,6 @@
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
 		E65FDCFB29717B0D003E4786 /* SoloistStraight-Jqgx.otf in Resources */ = {isa = PBXBuildFile; fileRef = E65FDCFA29717B0D003E4786 /* SoloistStraight-Jqgx.otf */; };
-		E66EDD802970703900656E4A /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EDD7F2970703900656E4A /* TextFieldStyle.swift */; };
 		E6A34ADC296C8E1A00FA4D30 /* VoicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A34ADB296C8E1A00FA4D30 /* VoicePicker.swift */; };
 		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
@@ -38,7 +37,6 @@
 		E61EB6F62952195E0057608E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EB6F92952195E0057608E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E65FDCFA29717B0D003E4786 /* SoloistStraight-Jqgx.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SoloistStraight-Jqgx.otf"; sourceTree = "<group>"; };
-		E66EDD7F2970703900656E4A /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		E6A34ADB296C8E1A00FA4D30 /* VoicePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePicker.swift; sourceTree = "<group>"; };
 		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */,
-				E66EDD7F2970703900656E4A /* TextFieldStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -242,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6D5BB7829572C5800DEE0B0 /* OnboardingView.swift in Sources */,
-				E66EDD802970703900656E4A /* TextFieldStyle.swift in Sources */,
 				E6FB90AE295A11F00070FCD2 /* UtteranceControlView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
