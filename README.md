@@ -32,6 +32,10 @@ Speech is configured using the parameters of the AVSpeechUtterance class:
 - PitchMultiplier - voice pitch from 0.5 to 2.0, default 1.0 on statrup
 
 ## User Interfaces (UI)
+## Light/Dark Mode Appearance:
+
+![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-13 at 13 51 55](https://user-images.githubusercontent.com/108011846/212314362-da80e90e-d0b5-4146-ad08-110f2b04e6d0.gif)
+
 ## Starry Sky Animated: 
 
 ![ezgif-4-2268c9b406](https://user-images.githubusercontent.com/108011846/212106855-07ec3286-072a-4924-8395-ce441879f67b.gif)
