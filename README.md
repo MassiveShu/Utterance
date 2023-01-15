@@ -13,7 +13,7 @@
 
 ![212346075-fd976b77-5834-49ef-8534-1494e352e7a0](https://user-images.githubusercontent.com/108011846/212557518-424015f3-44cc-4a41-9a16-6fbd218fdeea.gif)
 
-* Check Video (Mute turn off) :
+* Check Video (Turn Mute off) :
 
 https://user-images.githubusercontent.com/108011846/212110318-dff76c3b-e9a5-499e-b33d-be756ec2b861.MP4
 
