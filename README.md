@@ -11,7 +11,7 @@
 
 ## Please, take a look: 
 
-![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-12 at 16 35 39](https://user-images.githubusercontent.com/108011846/212094721-0aeccfe2-0978-4f7a-a203-b97bb86b2eac.gif)
+![212346075-fd976b77-5834-49ef-8534-1494e352e7a0](https://user-images.githubusercontent.com/108011846/212557518-424015f3-44cc-4a41-9a16-6fbd218fdeea.gif)
 
 * Check Video (Mute turn off) :
 
