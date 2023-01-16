@@ -45,6 +45,7 @@ struct StarsAnimationView: View {
     private var easeOutAnimation = Animation
         .easeOut(duration: 13)
         .repeatForever()
+
     private var randonInsets: EdgeInsets {
         EdgeInsets(
             top: self.randomPadding(),
@@ -53,6 +54,7 @@ struct StarsAnimationView: View {
             trailing: self.randomPadding()
         )
     }
+    
     private var overlayGradient: some View {
         Rectangle()
             .fill(

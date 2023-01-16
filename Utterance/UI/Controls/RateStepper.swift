@@ -9,13 +9,14 @@ import SwiftUI
 
 struct RateStepper: View {
     @Binding var rateValue: Float
-    
-    let step: Float = 0.25
+
+    private let range: ClosedRange<Float> = 0.25...2.0
+    private let step: Float = 0.25
     
     var body: some View {
         Stepper("Rate: \(String(format: "%.2f", rateValue))x",
                 value: $rateValue,
-                in: 0.25...2.0,
+                in: range,
                 step: step
         )
         .padding(10)
@@ -27,10 +28,10 @@ struct RateStepper: View {
 }
 
 struct RateStepper_Previews: PreviewProvider {
-    @State static var rate: Float = 1.0
+    @State static var rateValue: Float = 1.0
     
     static var previews: some View {
-        RateStepper(rateValue: $rate)
+        RateStepper(rateValue: $rateValue)
             .previewLayout(.sizeThatFits)
     }
 }

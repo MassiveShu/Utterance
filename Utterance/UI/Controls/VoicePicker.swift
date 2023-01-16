@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AVFoundation
 
 struct VoicePicker: View {
     @Binding var selectedVoice: String
