@@ -11,9 +11,9 @@
 
 ## Please, take a look: 
 
-![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-12 at 16 35 39](https://user-images.githubusercontent.com/108011846/212094721-0aeccfe2-0978-4f7a-a203-b97bb86b2eac.gif)
+![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-15 at 19 49 24](https://user-images.githubusercontent.com/108011846/212557967-c7c5d8d3-1d74-47ce-a217-a6a3ebe35a89.gif)
 
-* Check Video (Mute turn off) :
+* Check Video (Turn Mute off) :
 
 https://user-images.githubusercontent.com/108011846/212110318-dff76c3b-e9a5-499e-b33d-be756ec2b861.MP4
 
@@ -34,7 +34,7 @@ Speech is configured using the parameters of the AVSpeechUtterance class:
 ## User Interfaces (UI)
 ## Light/Dark Mode Appearance:
 
-![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-13 at 13 51 55](https://user-images.githubusercontent.com/108011846/212314362-da80e90e-d0b5-4146-ad08-110f2b04e6d0.gif)
+![Simulator Screen Recording - iPhone 13 Pro Max - 2023-01-15 at 19 44 46](https://user-images.githubusercontent.com/108011846/212557740-90f9199f-a1d9-42fd-bf44-096ad9ddb073.gif)
 
 ## Starry Sky Animated: 
 
