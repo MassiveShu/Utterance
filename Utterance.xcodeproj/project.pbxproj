@@ -18,7 +18,7 @@
 		E6A34ADC296C8E1A00FA4D30 /* VoicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A34ADB296C8E1A00FA4D30 /* VoicePicker.swift */; };
 		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
-		E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB692957134800DEE0B0 /* DragComponent.swift */; };
+		E6D5BB6E2957134800DEE0B0 /* DragButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB692957134800DEE0B0 /* DragButtonComponent.swift */; };
 		E6D5BB712957134800DEE0B0 /* Color+StarWars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6C2957134800DEE0B0 /* Color+StarWars.swift */; };
 		E6D5BB722957134800DEE0B0 /* SlideToUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButton.swift */; };
 		E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */; };
@@ -40,7 +40,7 @@
 		E6A34ADB296C8E1A00FA4D30 /* VoicePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePicker.swift; sourceTree = "<group>"; };
 		E6C6319A2955F0D5000AAB26 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
-		E6D5BB692957134800DEE0B0 /* DragComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragComponent.swift; sourceTree = "<group>"; };
+		E6D5BB692957134800DEE0B0 /* DragButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragButtonComponent.swift; sourceTree = "<group>"; };
 		E6D5BB6C2957134800DEE0B0 /* Color+StarWars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+StarWars.swift"; sourceTree = "<group>"; };
 		E6D5BB6D2957134800DEE0B0 /* SlideToUnlockButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideToUnlockButton.swift; sourceTree = "<group>"; };
 		E6D5BB732957136200DEE0B0 /* StarsAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsAnimationView.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		E6D5BB682957134800DEE0B0 /* ButtonComponent */ = {
 			isa = PBXGroup;
 			children = (
-				E6D5BB692957134800DEE0B0 /* DragComponent.swift */,
+				E6D5BB692957134800DEE0B0 /* DragButtonComponent.swift */,
 			);
 			path = ButtonComponent;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 				E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */,
 				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6D5BB712957134800DEE0B0 /* Color+StarWars.swift in Sources */,
-				E6D5BB6E2957134800DEE0B0 /* DragComponent.swift in Sources */,
+				E6D5BB6E2957134800DEE0B0 /* DragButtonComponent.swift in Sources */,
 				E60FD43A295B16E900F6EBC2 /* RateStepper.swift in Sources */,
 				E60FD43F295B36B900F6EBC2 /* UtteranceViewModel.swift in Sources */,
 				E6D5BB722957134800DEE0B0 /* SlideToUnlockButton.swift in Sources */,

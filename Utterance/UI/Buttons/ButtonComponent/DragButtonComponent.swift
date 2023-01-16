@@ -1,5 +1,5 @@
 //
-//  DragComponent.swift
+//  DragButtonComponent.swift
 //  Utterance
 //
 //  Created by Max Shu on 21.12.2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreHaptics
 
-struct DragComponent: View {
+struct DragButtonComponent: View {
     @Binding var isLocked: Bool
     @State private var engine: CHHapticEngine?
     
@@ -101,9 +101,9 @@ struct DragComponent: View {
     }
 }
 
-struct DragComponent_Previews: PreviewProvider {
+struct DragButtonComponent_Previews: PreviewProvider {
     static var previews: some View {
-        DragComponent(
+        DragButtonComponent(
             isLocked: .constant(true),
             action: {
                 

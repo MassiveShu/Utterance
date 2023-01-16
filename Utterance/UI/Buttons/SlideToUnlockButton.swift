@@ -11,8 +11,11 @@ struct SlideToUnlockButton: View {
     @State private var isLocked = true
     @State private var didSlide = false
 
-    let animation = Animation.easeOut(duration: 1.5).delay(0.2).repeatForever(autoreverses: true)
-    let gradient = Gradient(colors: [.white, .yellowCustom, .yellowCustom, .white])
+    private let animation = Animation
+        .easeOut(duration: 1.5)
+        .delay(0.2)
+        .repeatForever(autoreverses: true)
+    private let gradient = Gradient(colors: [.white, .yellowCustom, .yellowCustom, .white])
     
     let action: () -> Void
     
@@ -21,10 +24,11 @@ struct SlideToUnlockButton: View {
             ZStack(alignment: .leading) {
                 background
 
-                DragComponent(
+                DragButtonComponent(
                     isLocked: $isLocked,
                     action: action,
-                    maxWidth: geometry.size.width)
+                    maxWidth: geometry.size.width
+                )
             }
         }
         .frame(maxWidth: 350, maxHeight: 55)

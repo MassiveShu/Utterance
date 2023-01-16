@@ -12,10 +12,10 @@ struct PlayButton: View {
     @Binding var isPlaying: Bool
     @State private var engine: CHHapticEngine?
 
-    var playAction: () -> Void
-    
-    let playIcon = "play.circle"
-    let stopIcon = "stop.circle"
+    let playAction: () -> Void
+
+    private let playIcon = "play.circle"
+    private let stopIcon = "stop.circle"
 
     var body: some View {
         Button(action: {

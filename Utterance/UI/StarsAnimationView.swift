@@ -27,17 +27,9 @@ struct StarsAnimationView: View {
                                 .fill(Color.blackWhite)
                                 .frame(width: 3, height: 2)
                                 .blur(radius: runAnimation ? 1 : 0)
-                                .padding(
-                                    EdgeInsets(
-                                        top: self.randomPadding(),
-                                        leading: 0,
-                                        bottom: 0,
-                                        trailing: self.randomPadding()
-                                    )
-                                )
-                                .onAppear() {
-                                    let animation = Animation.easeOut(duration: 13).repeatForever()
-                                    withAnimation(animation) {
+                                .padding(randonInsets)
+                                .onAppear {
+                                    withAnimation(easeOutAnimation) {
                                         self.runAnimation = true
                                     }
                                 }
@@ -49,20 +41,32 @@ struct StarsAnimationView: View {
             .navigationBarBackButtonHidden(true)
         }
     }
-    
-    func randomPadding() -> CGFloat {
-        CGFloat(Int.random(in: 20..<150))
-    }
-    
-    private var overlayGradient: some View {
-        Rectangle().fill(
-            LinearGradient(
-                gradient: Gradient(colors: [.lightBlue, .whiteBlack]),
-                startPoint: .top,
-                endPoint: .center
-            )
-            .opacity(0.4)
+
+    private var easeOutAnimation = Animation
+        .easeOut(duration: 13)
+        .repeatForever()
+    private var randonInsets: EdgeInsets {
+        EdgeInsets(
+            top: self.randomPadding(),
+            leading: 0,
+            bottom: 0,
+            trailing: self.randomPadding()
         )
+    }
+    private var overlayGradient: some View {
+        Rectangle()
+            .fill(
+                LinearGradient(
+                    gradient: Gradient(colors: [.lightBlue, .whiteBlack]),
+                    startPoint: .top,
+                    endPoint: .center
+                )
+                .opacity(0.4)
+            )
+    }
+
+    private func randomPadding() -> CGFloat {
+        CGFloat(Int.random(in: 20..<150))
     }
 }
 

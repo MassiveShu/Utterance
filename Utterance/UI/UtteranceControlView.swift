@@ -67,7 +67,6 @@ struct UtteranceControlView: View {
                     isPlaying: $viewModel.isPlaying,
                     playAction: viewModel.playPause
                 )
-                
             }
             .background {
                 StarsAnimationView()
