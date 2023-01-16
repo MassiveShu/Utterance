@@ -82,7 +82,7 @@ struct DragButtonComponent: View {
     func hapticsSuccess() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
         
-        var events  = [CHHapticEvent]()
+        var events = [CHHapticEvent]()
         
         for i in stride(from: 0, through: 1, by: 0.1) {
             let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: Float(i))

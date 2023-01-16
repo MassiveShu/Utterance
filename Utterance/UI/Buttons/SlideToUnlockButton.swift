@@ -11,10 +11,11 @@ struct SlideToUnlockButton: View {
     @State private var isLocked = true
     @State private var didSlide = false
 
-    private let animation = Animation
+    private let easeOutAnimation = Animation
         .easeOut(duration: 1.5)
         .delay(0.2)
         .repeatForever(autoreverses: true)
+
     private let gradient = Gradient(colors: [.white, .yellowCustom, .yellowCustom, .white])
     
     let action: () -> Void
@@ -50,7 +51,7 @@ struct SlideToUnlockButton: View {
             .mask(Text("Continue..."))
             .font(.title2.bold())
             .onAppear() {
-                withAnimation(animation) {
+                withAnimation(easeOutAnimation) {
                     self.didSlide = true
                 }
             }

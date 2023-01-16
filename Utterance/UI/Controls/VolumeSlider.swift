@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MediaPlayer
 
 struct VolumeSlider: View {
     @Binding var activeVolume: Float
@@ -24,10 +23,10 @@ struct VolumeSlider: View {
 }
 
 struct VolumeSlider_Previews: PreviewProvider {
-    @State static var volume: Float = 1
+    @State static var activeVolume: Float = 1
     
     static var previews: some View {
-        VolumeSlider(activeVolume: $volume)
+        VolumeSlider(activeVolume: $activeVolume)
             .previewLayout(.sizeThatFits)
     }
 }
