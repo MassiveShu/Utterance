@@ -36,7 +36,8 @@ struct DragButtonComponent: View {
                     .onChanged { value in
                         guard isLocked else { return }
                         if value.translation.width > 0 {
-                            width = min(max(value.translation.width + minWidth, minWidth), maxWidth)
+                            let tempWidth = max(value.translation.width + minWidth, minWidth)
+                            width = min(tempWidth,maxWidth)
                         }
                     }
                     .onEnded { value in

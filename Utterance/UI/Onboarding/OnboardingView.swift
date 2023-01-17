@@ -10,6 +10,10 @@ import SwiftUI
 struct OnboardingView: View {
     @State private var isLocked = false
 
+    var deadline: DispatchTime {
+        DispatchTime.now() + .seconds(1)
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -23,7 +27,7 @@ struct OnboardingView: View {
                 }
 
                 SlideToUnlockButton(action: {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    DispatchQueue.main.asyncAfter(deadline: deadline) {
                         isLocked = true
                     }
                 })
