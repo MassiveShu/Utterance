@@ -9,7 +9,32 @@ import Foundation
 import SwiftUI
 import AVFoundation
 
-final class UtteranceViewModel: ObservableObject {
+//class SpeechVM: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
+//    @Published var isSpeaking = false
+//
+//    private lazy var synthesizer = AVSpeechSynthesizer()
+//    override init() {
+//        super.init()
+//        synthesizer.delegate = self
+//    }
+//    deinit {
+//        synthesizer.delegate = nil
+//    }
+//
+//    func speak(_ utterance: AVSpeechUtterance) {
+//        self.synthesizer.speak(utterance)
+//    }
+//
+//    internal func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+//        debugPrint("Utterance started")
+//        isSpeaking = true
+//    }
+//}
+protocol AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance)
+}
+
+final class UtteranceViewModel: ObservableObject, AVSpeechSynthesizerDelegate {
     @Published var activeVolume: Float = 0.3
     @Published var activeText: String = "The evil lord Darth vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space..."
     @Published var activeRate: Float = 0.5
@@ -20,9 +45,8 @@ final class UtteranceViewModel: ObservableObject {
     private lazy var synthesizer = AVSpeechSynthesizer()
     
     let allVoices: [AVSpeechSynthesisVoice]
-    
     let allVoicesName: [String]
-    
+
     init() {
         self.allVoices = {
             AVSpeechSynthesisVoice.speechVoices().filter { voice in
@@ -31,7 +55,7 @@ final class UtteranceViewModel: ObservableObject {
         }()
         
         self.allVoicesName = allVoices.map(\.name)
-        
+
         selectedVoice = allVoicesName.first ?? ""
     }
     
@@ -60,6 +84,10 @@ final class UtteranceViewModel: ObservableObject {
     func stopPronouce() {
         synthesizer.stopSpeaking(at: .immediate)
         isPlaying = false
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        print("Utterance has started")
     }
 }
 
