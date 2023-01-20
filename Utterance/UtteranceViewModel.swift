@@ -9,59 +9,36 @@ import Foundation
 import SwiftUI
 import AVFoundation
 
-//class SpeechVM: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
-//    @Published var isSpeaking = false
-//
-//    private lazy var synthesizer = AVSpeechSynthesizer()
-//    override init() {
-//        super.init()
-//        synthesizer.delegate = self
-//    }
-//    deinit {
-//        synthesizer.delegate = nil
-//    }
-//
-//    func speak(_ utterance: AVSpeechUtterance) {
-//        self.synthesizer.speak(utterance)
-//    }
-//
-//    internal func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-//        debugPrint("Utterance started")
-//        isSpeaking = true
-//    }
-//}
-protocol AVSpeechSynthesizerDelegate {
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance)
-}
-
-final class UtteranceViewModel: ObservableObject, AVSpeechSynthesizerDelegate {
+final class UtteranceViewModel: NSObject, ObservableObject {
     @Published var activeVolume: Float = 0.3
     @Published var activeText: String = "The evil lord Darth vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes across the far reaches of space..."
     @Published var activeRate: Float = 0.5
     @Published var activePitch: Float = 1
     @Published var selectedVoice: String = ""
     @Published var isPlaying = false
-    
+
     private lazy var synthesizer = AVSpeechSynthesizer()
     
     let allVoices: [AVSpeechSynthesisVoice]
     let allVoicesName: [String]
 
-    init() {
+    override init() {
         self.allVoices = {
             AVSpeechSynthesisVoice.speechVoices().filter { voice in
                 voice.language.starts(with: "en")
             }
         }()
-        
         self.allVoicesName = allVoices.map(\.name)
+
+        super.init()
+        synthesizer.delegate = self
 
         selectedVoice = allVoicesName.first ?? ""
     }
     
     func playPause() {
         if isPlaying {
-            stopPronouce()
+            stopPronounce()
         } else {
             pronounce()
         }
@@ -81,13 +58,23 @@ final class UtteranceViewModel: ObservableObject, AVSpeechSynthesizerDelegate {
         isPlaying = true
     }
     
-    func stopPronouce() {
+    func stopPronounce() {
         synthesizer.stopSpeaking(at: .immediate)
         isPlaying = false
     }
+}
 
+extension UtteranceViewModel: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        print("Utterance has started")
+        print("Utterance: didStart")
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        print("Utterance: didFinish")
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+        print("Utterance: \((activeText as NSString).substring(with: characterRange))")
     }
 }
 
