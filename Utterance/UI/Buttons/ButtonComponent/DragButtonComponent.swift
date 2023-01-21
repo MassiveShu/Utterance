@@ -13,7 +13,7 @@ struct DragButtonComponent: View {
     @State private var engine: CHHapticEngine?
     
     let action: () -> Void
-    
+
     @State private var width = CGFloat(50)
     let maxWidth: CGFloat
     private let minWidth = CGFloat(50)
@@ -37,7 +37,7 @@ struct DragButtonComponent: View {
                         guard isLocked else { return }
                         if value.translation.width > 0 {
                             let tempWidth = max(value.translation.width + minWidth, minWidth)
-                            width = min(tempWidth,maxWidth)
+                            width = min(tempWidth, maxWidth)
                         }
                     }
                     .onEnded { value in

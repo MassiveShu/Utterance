@@ -10,13 +10,6 @@ import SwiftUI
 struct SlideToUnlockButton: View {
     @State private var isLocked = true
     @State private var didSlide = false
-
-    private let easeOutAnimation = Animation
-        .easeOut(duration: 1.5)
-        .delay(0.2)
-        .repeatForever(autoreverses: true)
-
-    private let gradient = Gradient(colors: [.white, .yellowCustom, .yellowCustom, .white])
     
     let action: () -> Void
     
@@ -24,7 +17,7 @@ struct SlideToUnlockButton: View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 background
-
+                
                 DragButtonComponent(
                     isLocked: $isLocked,
                     action: action,
@@ -37,6 +30,13 @@ struct SlideToUnlockButton: View {
             guard !isLocked else { return }
         }
     }
+
+    private let easeOutAnimation = Animation
+        .easeOut(duration: 1.5)
+        .delay(0.2)
+        .repeatForever(autoreverses: true)
+
+    private let gradient = Gradient(colors: [.white, .yellowCustom, .yellowCustom, .white])
     
     private var background: some View {
         ZStack {
@@ -64,6 +64,5 @@ struct SlideToUnlockButton_Previews: PreviewProvider {
         SlideToUnlockButton(action: {
             
         })
-        .previewLayout(.sizeThatFits)
     }
 }
