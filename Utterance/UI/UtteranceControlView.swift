@@ -41,7 +41,7 @@ struct UtteranceControlView: View {
                         .foregroundColor(.blackWhite)
                     
                     VoicePicker(
-                        selectedVoice: $viewModel.selectedVoice,
+                        selectedVoice: $viewModel.selectedUtterance/UI/UtteranceControlView.swiftVoice,
                         allVoices: viewModel.allVoicesName
                     )
                     
@@ -52,10 +52,11 @@ struct UtteranceControlView: View {
                     VolumeSlider(
                         activeVolume: $viewModel.activeVolume
                     )
-                    
-                    RateStepper(
-                        rateValue: $viewModel.activeRate
-                    )
+
+                    Text("Rate:")
+                        .font(.body.bold())
+                        .foregroundColor(.blackWhite)
+                    RateSlider(rateValue: $viewModel.activeRate)
                     
                     PitchStepper(
                         pitchValue: $viewModel.activePitch

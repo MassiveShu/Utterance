@@ -19,11 +19,12 @@ struct VolumeSlider: View {
             in: range,
             step: step
         )
+        .accentColor(.yellowCustom)
     }
 }
 
 struct VolumeSlider_Previews: PreviewProvider {
-    @State static var activeVolume: Float = 1
+    @State static var activeVolume: Float = 0.3
     
     static var previews: some View {
         VolumeSlider(activeVolume: $activeVolume)
