@@ -11,11 +11,11 @@
 		E60FD43A295B16E900F6EBC2 /* RateStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD439295B16E900F6EBC2 /* RateStepper.swift */; };
 		E60FD43C295B284100F6EBC2 /* PitchStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD43B295B284100F6EBC2 /* PitchStepper.swift */; };
 		E60FD43F295B36B900F6EBC2 /* UtteranceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FD43E295B36B900F6EBC2 /* UtteranceViewModel.swift */; };
-		E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E61EB6F72952195E0057608E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F62952195E0057608E /* Assets.xcassets */; };
 		E61EB6FA2952195E0057608E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EB6F92952195E0057608E /* Preview Assets.xcassets */; };
 		E65FDCFB29717B0D003E4786 /* SoloistStraight-Jqgx.otf in Resources */ = {isa = PBXBuildFile; fileRef = E65FDCFA29717B0D003E4786 /* SoloistStraight-Jqgx.otf */; };
 		E6A34ADC296C8E1A00FA4D30 /* VoicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A34ADB296C8E1A00FA4D30 /* VoicePicker.swift */; };
+		E6AD761C297BE41100B0B44A /* UtteranceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EB6F22952195D0057608E /* UtteranceApp.swift */; };
 		E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319A2955F0D5000AAB26 /* PlayButton.swift */; };
 		E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C6319E2955F0E4000AAB26 /* PlayButtonStyle.swift */; };
 		E6D5BB6E2957134800DEE0B0 /* DragButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D5BB692957134800DEE0B0 /* DragButtonComponent.swift */; };
@@ -238,9 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6AD761C297BE41100B0B44A /* UtteranceApp.swift in Sources */,
 				E6D5BB7829572C5800DEE0B0 /* OnboardingView.swift in Sources */,
 				E6FB90AE295A11F00070FCD2 /* UtteranceControlView.swift in Sources */,
-				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6C6319B2955F0D5000AAB26 /* PlayButton.swift in Sources */,
 				E6FB90B6295A19770070FCD2 /* Font+StarWars.swift in Sources */,
 				E6A34ADC296C8E1A00FA4D30 /* VoicePicker.swift in Sources */,
@@ -248,7 +248,6 @@
 				E60FD436295B121200F6EBC2 /* VolumeSlider.swift in Sources */,
 				E6C6319F2955F0E4000AAB26 /* PlayButtonStyle.swift in Sources */,
 				E6D5BB742957136200DEE0B0 /* StarsAnimationView.swift in Sources */,
-				E61EB6F32952195D0057608E /* UtteranceApp.swift in Sources */,
 				E6D5BB712957134800DEE0B0 /* Color+StarWars.swift in Sources */,
 				E6D5BB6E2957134800DEE0B0 /* DragButtonComponent.swift in Sources */,
 				E60FD43A295B16E900F6EBC2 /* RateStepper.swift in Sources */,
