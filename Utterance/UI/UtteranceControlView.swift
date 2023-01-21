@@ -41,7 +41,7 @@ struct UtteranceControlView: View {
                         .foregroundColor(.blackWhite)
                     
                     VoicePicker(
-                        selectedVoice: $viewModel.selectedUtterance/UI/UtteranceControlView.swiftVoice,
+                        selectedVoice: $viewModel.selectedVoice,
                         allVoices: viewModel.allVoicesName
                     )
                     
