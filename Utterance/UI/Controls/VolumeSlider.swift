@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct VolumeSlider: View {
-    @Binding var activeVolume: Float
+    @Binding var activeVolume: Double
     
-    private let range: ClosedRange<Float> = 0...1
-    private let step: Float = 0.1
+    private let range: ClosedRange<Double> = 0...1
+    private let step: Double = 0.1
     
     var body: some View {
         Slider(
@@ -24,7 +24,7 @@ struct VolumeSlider: View {
 }
 
 struct VolumeSlider_Previews: PreviewProvider {
-    @State static var activeVolume: Float = 0.3
+    @State static var activeVolume: Double = 0.3
     
     static var previews: some View {
         VolumeSlider(activeVolume: $activeVolume)

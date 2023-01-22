@@ -9,11 +9,11 @@ import SwiftUI
 
 
 struct RateSlider: View {
-    @Binding var rateValue: Float
+    @Binding var rateValue: Double
     
-    private let range: ClosedRange<Float> = 0.25...1.0
+    private let range: ClosedRange<Double> = 0.25...1.0
     private let max: Float = 1.0
-    private let step: Float = 0.25
+    private let step: Double = 0.25
     
     var body: some View {
         VStack(spacing: 0) {
@@ -40,7 +40,7 @@ struct RateSlider: View {
 }
 
 struct RateSlider_Previews: PreviewProvider {
-    @State static var rateValue: Float = 0.5
+    @State static var rateValue: Double = 0.5
     
     static var previews: some View {
         RateSlider(rateValue: $rateValue)
