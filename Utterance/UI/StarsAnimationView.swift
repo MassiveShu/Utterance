@@ -27,7 +27,7 @@ struct StarsAnimationView: View {
                                 .fill(Color.blackWhite)
                                 .frame(width: 3, height: 2)
                                 .blur(radius: runAnimation ? 1 : 0)
-                                .padding(randonInsets)
+                                .padding(randomInsets)
                                 .onAppear {
                                     withAnimation(easeOutAnimation) {
                                         self.runAnimation = true
@@ -46,7 +46,7 @@ struct StarsAnimationView: View {
         .easeOut(duration: 13)
         .repeatForever()
 
-    private var randonInsets: EdgeInsets {
+    private var randomInsets: EdgeInsets {
         EdgeInsets(
             top: self.randomPadding(),
             leading: 0,
