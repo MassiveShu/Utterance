@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 
 struct RateSlider: View {
     @Binding var rateValue: Double
+    @State private var engine: CHHapticEngine?
     
     private let range: ClosedRange<Double> = 0.25...1.0
     private let max: Float = 1.0
@@ -22,6 +24,9 @@ struct RateSlider: View {
                 in: range,
                 step: step
             )
+            .onChange(of: rateValue) { value in
+                hapticsSuccess()
+            }
             .accentColor(.yellowCustom)
             
             HStack(spacing: 0) {
@@ -35,6 +40,34 @@ struct RateSlider: View {
                 }
             }
             .padding(.horizontal, 10)
+        }
+        .onAppear(perform: prepareHaptics)
+    }
+    
+    func prepareHaptics() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        
+        do {
+            engine = try CHHapticEngine()
+            try engine?.start()
+        } catch {
+            print("Error with creating the engine: \(error.localizedDescription)")
+        }
+    }
+    
+    func hapticsSuccess() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        
+        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
+        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 1)
+        let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 0)
+        
+        do {
+            let pattern = try CHHapticPattern(events: [event], parameters: [])
+            let player = try engine?.makePlayer(with: pattern)
+            try player?.start(atTime: 0)
+        } catch {
+            print("Failed to play pattern: \(error.localizedDescription)")
         }
     }
 }
